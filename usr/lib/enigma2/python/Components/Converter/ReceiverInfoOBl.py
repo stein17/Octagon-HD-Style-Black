@@ -10,7 +10,7 @@ SIZE_UNITS = ['B',
  'PB',
  'EB']
 
-class InfoOCT(Poll, Converter):
+class ReceiverInfoOBl(Poll, Converter):
     HDDTEMP = 0
     LOADAVG = 1
     MEMTOTAL = 2
@@ -27,9 +27,6 @@ class InfoOCT(Poll, Converter):
         type = type.split(',')
         self.shortFormat = 'Short' in type
         self.fullFormat = 'Full' in type
-        self.freiFormat = 'Frei' in type
-        self.genutztFormat = 'Genutzt' in type
-        self.langFormat = 'Lang' in type
         if 'HddTemp' in type:
             self.type = self.HDDTEMP
         elif 'LoadAvg' in type:
@@ -81,30 +78,17 @@ class InfoOCT(Poll, Converter):
             else:
                 list = self.getMemInfo(entry[0])
             if list[0] == 0:
-                if self.freiFormat or self.genutztFormat or self.langFormat:
-                    text = 'Nicht vorhanden'
-                else:
-                    text = '%s: Not Available' % entry[1]
-            elif self.freiFormat:
-                    text = '%s, %s frei' % (self.getSizeStr(list[0]),
-                    self.getSizeStr(list[2]))
-            elif self.genutztFormat:
-                    text = '%s, %s%% genutzt' % (self.getSizeStr(list[0]), list[3])
-            elif self.langFormat:
-                 text = '%s, %s frei, %s genutzt (%s%%)' % (self.getSizeStr(list[0]),
-                 self.getSizeStr(list[2]),
-                 self.getSizeStr(list[1]),
-                 list[3])
+                text = '%s: Not Available' % entry[1]
             elif self.shortFormat:
-                text = '%s: %s, in use: %s%%' % (entry[1], self.getSizeStr(list[0]), list[3])
+                text = '%s: %s, im Einsatz: %s%%' % (entry[1], self.getSizeStr(list[0]), list[3])
             elif self.fullFormat:
-                text = '%s: %s Free:%s Used:%s (%s%%)' % (entry[1],
+                text = '%s: %s Frei:%s Verwendet:%s (%s%%)' % (entry[1],
                  self.getSizeStr(list[0]),
                  self.getSizeStr(list[2]),
                  self.getSizeStr(list[1]),
                  list[3])
             else:
-                text = '%s: %s Used:%s Free:%s' % (entry[1],
+                text = '%s: %s Verwendet:%s Frei:%s' % (entry[1],
                  self.getSizeStr(list[0]),
                  self.getSizeStr(list[1]),
                  self.getSizeStr(list[2]))
@@ -150,7 +134,7 @@ class InfoOCT(Poll, Converter):
         info = '0'
         try:
             out_line = popen('cat /proc/loadavg').readline()
-            info = '' + str(out_line)[:4]
+            info = 'loadavg:' + out_line[:15]
             textvalue = info
         except:
             pass

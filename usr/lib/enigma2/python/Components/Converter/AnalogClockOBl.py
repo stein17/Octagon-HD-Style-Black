@@ -2,7 +2,7 @@ from Components.Converter.Converter import Converter
 from Components.Element import cached
 from time import localtime, strftime
 
-class AnalogClockOCT(Converter, object):
+class AnalogClockOBl(Converter, object):
     SNRNUM = 0
     AGCNUM = 1
     BERNUM = 2

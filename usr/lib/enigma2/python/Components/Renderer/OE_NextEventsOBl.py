@@ -3,7 +3,7 @@ from Renderer import Renderer
 from enigma import eLabel, eEPGCache
 from time import localtime
 
-class OE_NextEventsOCT(VariableText, Renderer):
+class OE_NextEventsOBl(VariableText, Renderer):
 	def __init__(self):
 		Renderer.__init__(self)
 		VariableText.__init__(self)

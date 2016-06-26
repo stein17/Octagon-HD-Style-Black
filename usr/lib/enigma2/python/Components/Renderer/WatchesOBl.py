@@ -5,7 +5,7 @@ from enigma import eCanvas, eSize, gRGB, eRect
 from Components.VariableText import VariableText
 from Components.config import config
 
-class WatchesOCT(Renderer):
+class WatchesOBl(Renderer):
 
     def __init__(self):
         Renderer.__init__(self)

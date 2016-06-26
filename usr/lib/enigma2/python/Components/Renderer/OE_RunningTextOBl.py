@@ -52,7 +52,7 @@ BOTTOM   = 3
 CENTER   = 2
 BLOCK    = 3
 
-class OE_RunningTextOCT(Renderer):
+class OE_RunningTextOBl(Renderer):
     def __init__(self):
         Renderer.__init__(self)
         self.type     = NONE

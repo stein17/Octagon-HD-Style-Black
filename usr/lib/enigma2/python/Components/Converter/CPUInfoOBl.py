@@ -11,7 +11,7 @@ from Poll import Poll
 from Components.Element import cached
 
 
-class CpuUsageOCT(Converter, object):
+class CPUInfoOBl(Converter, object):
 	CPU_ALL   = -2
 	CPU_TOTAL = -1
 

@@ -12,7 +12,7 @@ from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr, e
 from Components.Element import cached
 from Components.config import config
 
-class ServiceNameOCT(Converter, object):
+class ServiceNameOBl(Converter, object):
 	NAME = 0
 	NUMBER = 1
 	BOUQUET = 2

@@ -11,7 +11,7 @@ from time import localtime, strftime, mktime, time
 from datetime import datetime
 
 
-class NextEventsPrimeTimeOCT(Converter, object):
+class NextEventsPrimeTimeOBl(Converter, object):
 	Event1 = 0
 	Event2 = 1
 	Event3 = 2

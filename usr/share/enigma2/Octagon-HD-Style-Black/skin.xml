@@ -89,10 +89,13 @@
     <color name="un00605f5e" value="#00605f5e" />
     <color name="un1075777A" value="#1075777a" />
     <color name="un18080911" value="#18080911" />
+    <color name="un18188b" value="#0018188b" />
+    <color name="un1f771f" value="#001f771f" />
     <color name="un20224f" value="#0020224f" />
     <color name="un20343c4f" value="#20343c4f" />
     <color name="un203658a4" value="#203658a4" />
     <color name="un21b0cf" value="#0021b0cf" />
+    <color name="un25062748" value="#25062748" />
     <color name="un2f4f4f" value="#002f4f4f" />
     <color name="un303030" value="#00303030" />
     <color name="un3B98C9" value="#003b98c9" />
@@ -108,6 +111,7 @@
     <color name="un8b" value="#0000008b" />
     <color name="un8f8f8f" value="#008f8f8f" />
     <color name="un9F1313" value="#009f1313" />
+    <color name="una08500" value="#00a08500" />
     <color name="unB59E01" value="#00b59e01" />
     <color name="unb5b5b5" value="#00b5b5b5" />
     <color name="unC6C6C6" value="#00c6c6c6" />
@@ -120,11 +124,14 @@
     <color name="unf0b400" value="#00f0b400" />
     <color name="unf0f0f" value="#000f0f0f" />
     <color name="unf0f0f0" value="#00f0f0f0" />
+    <color name="unf8f2e6" value="#00f8f2e6" />
+    <color name="unfba207" value="#00fba207" />
     <color name="unfcc000" value="#00fcc000" />
     <color name="unff0000" value="#00ff0000" />
     <color name="unff000000" value="#ff000000" />
     <color name="unFF6600" value="#00ff6600" />
     <color name="unffd700" value="#00ffd700" />
+    <color name="unfff000" value="#00fff000" />
     <color name="unffffff" value="#00ffffff" />
     <color name="white" value="#00fefefe" />
     <color name="yellow" value="#00e5b243" />
@@ -197,7 +204,7 @@
     <widget source="global.CurrentTime" render="Label" position="1151,597" size="110,50" font="Regular; 36" halign="center" backgroundColor="black" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.CurrentService" render="OE_XPiconOCT" position="133,580" size="220,132" zPosition="4" transparent="0" alphatest="blend">
+    <widget source="session.CurrentService" render="OE_XPiconOBl" position="133,580" size="220,132" zPosition="4" transparent="0" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="360,606" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" transparent="1" valign="top">
@@ -244,7 +251,7 @@
     <!-- Digitalclock  */-->
     <eLabel text="SNR :" position="5,605" size="65,30" halign="right" font="Regular; 20" backgroundColor="black" transparent="1" valign="center" foregroundColor="metrixGreen" />
     <widget source="session.FrontendStatus" render="Label" position="73,608" size="55,30" font="Regular; 20" backgroundColor="black" transparent="1" halign="left" foregroundColor="metrixGreen">
-      <convert type="FrontendInfoOCT">SNR</convert>
+      <convert type="FrontendInfoOBl">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Progress" position="16,642" size="100,5" zPosition="20" pixmap="Octagon-HD-Style-Black/snr1.png" transparent="1" borderWidth="1" borderColor="un303030">
       <convert type="FrontendInfo">SNR</convert>
@@ -264,16 +271,16 @@
     <ePixmap position="0,1" zPosition="-1" size="1280,721" pixmap="Octagon-HD-Style-Black/menu/Octagon_Secondinfobar.png" alphatest="blend" />
     <eLabel text="Jetzt :" position="16,92" size="80,32" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="left" />
     <eLabel text="Demnächst in" position="884,148" size="210,32" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="center" />
-    <widget source="session.Event_Now" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="20,131" size="600,490" font="Regular; 22" zPosition="1" backgroundColor="black" foregroundColor="white" transparent="1" halign="left">
+    <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="20,131" size="600,490" font="Regular; 22" zPosition="1" backgroundColor="black" foregroundColor="white" transparent="1" halign="left">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.Event_Next" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="658,301" size="600,350" font="Regular; 22" zPosition="0" backgroundColor="black" transparent="1" halign="left" foregroundColor="white">
+    <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="658,301" size="600,350" font="Regular; 22" zPosition="0" backgroundColor="black" transparent="1" halign="left" foregroundColor="white">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.Event_Now" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="89,92" size="530,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="cyan1" transparent="1" halign="left">
+    <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="89,92" size="530,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="cyan1" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="session.Event_Next" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="659,259" size="600,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="unfcc000" transparent="1" halign="left">
+    <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="659,259" size="600,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="unfcc000" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="1035,195" size="150,40" font="Regular; 30" halign="center" backgroundColor="black" transparent="1">
@@ -371,7 +378,7 @@
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_off.png" position="1000,690" size="41,20" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" position="1000,690" size="41,20" zPosition="2" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_on.png" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRangeOCT">721,1980</convert>
+      <convert type="ValueRangeOBl">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_off.png" position="930,690" size="56,20" zPosition="1" alphatest="blend" />
@@ -418,79 +425,79 @@
     </widget>
     <eLabel text="B" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="B">
-      <convert type="CryptInfoOCT">BetaCrypt</convert>
+      <convert type="CryptInfoOBl">BetaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="275,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="B">
-      <convert type="CryptInfoOCT">BetaEcm</convert>
+      <convert type="CryptInfoOBl">BetaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="I" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="I">
-      <convert type="CryptInfoOCT">IrdCrypt</convert>
+      <convert type="CryptInfoOBl">IrdCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="293,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="I">
-      <convert type="CryptInfoOCT">IrdEcm</convert>
+      <convert type="CryptInfoOBl">IrdEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="S" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="S">
-      <convert type="CryptInfoOCT">SecaCrypt</convert>
+      <convert type="CryptInfoOBl">SecaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="311,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="S">
-      <convert type="CryptInfoOCT">SecaEcm</convert>
+      <convert type="CryptInfoOBl">SecaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="V" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" transparent="1" valign="center" zPosition="3" foregroundColor="un777777" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="V">
-      <convert type="CryptInfoOCT">ViaCrypt</convert>
+      <convert type="CryptInfoOBl">ViaCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" text="V" font="Regular; 22" position="329,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center">
-      <convert type="CryptInfoOCT">ViaEcm</convert>
+      <convert type="CryptInfoOBl">ViaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="N" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="N">
-      <convert type="CryptInfoOCT">NagraCrypt</convert>
+      <convert type="CryptInfoOBl">NagraCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="347,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="N">
-      <convert type="CryptInfoOCT">NagraEcm</convert>
+      <convert type="CryptInfoOBl">NagraEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CW" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CW">
-      <convert type="CryptInfoOCT">CrwCrypt</convert>
+      <convert type="CryptInfoOBl">CrwCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="368,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="CW">
-      <convert type="CryptInfoOCT">CrwEcm</convert>
+      <convert type="CryptInfoOBl">CrwEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="ND" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="ND">
-      <convert type="CryptInfoOCT">NdsCrypt</convert>
+      <convert type="CryptInfoOBl">NdsCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="411,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="ND">
-      <convert type="CryptInfoOCT">NdsEcm</convert>
+      <convert type="CryptInfoOBl">NdsEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="CO" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CO">
-      <convert type="CryptInfoOCT">ConaxCrypt</convert>
+      <convert type="CryptInfoOBl">ConaxCrypt</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="453,713" size="36,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="CO">
-      <convert type="CryptInfoOCT">ConaxEcm</convert>
+      <convert type="CryptInfoOBl">ConaxEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="SNR :" position="1141,687" size="70,26" halign="right" font="Regular; 20" backgroundColor="black" transparent="1" valign="center" foregroundColor="meingruen" />
     <widget source="session.FrontendStatus" render="Label" position="1212,687" size="66,26" font="Regular; 20" backgroundColor="black" transparent="1" halign="left" foregroundColor="meingruen">
-      <convert type="FrontendInfoOCT">SNR</convert>
+      <convert type="FrontendInfoOBl">SNR</convert>
     </widget>
     <eLabel text="A" position="89,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
     <eLabel text="B" position="110,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
@@ -498,42 +505,42 @@
     <eLabel text="D" position="152,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
     <widget source="session.TunerInfo" render="FixedLabel" text="A" position="89,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOCT">1</convert>
+      <convert type="ValueBitTestOBl">1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.TunerInfo" render="FixedLabel" text="B" position="110,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOCT">2</convert>
+      <convert type="ValueBitTestOBl">2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.TunerInfo" render="FixedLabel" text="C" position="131,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOCT">4</convert>
+      <convert type="ValueBitTestOBl">4</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.TunerInfo" render="FixedLabel" text="D" position="152,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
       <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOCT">8</convert>
+      <convert type="ValueBitTestOBl">8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.FrontendInfo" render="FixedLabel" position="89,713" zPosition="5" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOCT">NUMBER</convert>
-      <convert type="ValueRangeOCT">0,0</convert>
+      <convert type="FrontendInfoOBl">NUMBER</convert>
+      <convert type="ValueRangeOBl">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfoOCT" render="FixedLabel" position="110,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOCT">NUMBER</convert>
-      <convert type="ValueRangeOCT">1,1</convert>
+    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="110,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+      <convert type="FrontendInfoOBl">NUMBER</convert>
+      <convert type="ValueRangeOBl">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfoOCT" render="FixedLabel" position="131,713" zPosition="3" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOCT">NUMBER</convert>
-      <convert type="ValueRangeOCT">2,2</convert>
+    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="131,713" zPosition="3" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+      <convert type="FrontendInfoOBl">NUMBER</convert>
+      <convert type="ValueRangeOBl">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfoOCT" render="FixedLabel" position="152,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOCT">NUMBER</convert>
-      <convert type="ValueRangeOCT">3,3</convert>
+    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="152,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+      <convert type="FrontendInfoOBl">NUMBER</convert>
+      <convert type="ValueRangeOBl">3,3</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <eLabel text="Tuner:" position="15,687" size="75,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="cyan1" zPosition="5" />
@@ -544,7 +551,7 @@
   <screen name="ChannelSelection" position="0,0" size="1280,720" backgroundColor="black" title="Channel Selection" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" />
     <widget backgroundColor="black" colorEventProgressbarBorder="meindunkelgrau" colorEventProgressbarBorderSelected="meindunkelgrau" colorServiceDescription="cyan1" colorServiceDescriptionSelected="unfcc000" foregroundColorServiceNotAvail="#00555555" itemHeight="44" name="list" position="17,67" scrollbarMode="showNever" serviceInfoFont="Regular;20" serviceItemHeight="44" serviceNameFont="Regular;22" serviceNumberFont="Regular;22" size="700,580" transparent="1" />
-    <widget source="ServiceEvent" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="748,220" size="520,30" font="Regular; 24" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" halign="center">
+    <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="748,220" size="520,30" font="Regular; 24" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" halign="center">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="1020,135" size="82,26" font="Regular; 24" backgroundColor="black" transparent="1" halign="right" valign="top">
@@ -577,22 +584,22 @@
     </widget>
     <!-- ChannelSelection Header *-->
     <!-- /* ExtendedDescription -->
-    <widget source="ServiceEvent" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="748,261" size="520,251" font="Regular; 20" backgroundColor="black" foregroundColor="unfcc000" transparent="1" valign="top">
+    <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="748,261" size="520,251" font="Regular; 20" backgroundColor="black" foregroundColor="unfcc000" transparent="1" valign="top">
       <convert type="EventName">FullDescription</convert>
     </widget>
-    <widget source="ServiceEvent" render="OE_NextEventsOCT" position="749,524" size="520,105" noWrap="1" font="Regular;21" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="5">
+    <widget source="ServiceEvent" render="OE_NextEventsOBl" position="749,524" size="520,105" noWrap="1" font="Regular;21" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="5">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="748,636" size="440,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" noWrap="1" transparent="1" backgroundColor="black">
-      <convert type="NextEventsPrimeTimeOCT">PrimeTime,noDuration</convert>
+      <convert type="NextEventsPrimeTimeOBl">PrimeTime,noDuration</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="1189,636" size="80,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" halign="right" transparent="1" backgroundColor="black">
-      <convert type="NextEventsPrimeTimeOCT">PrimeTime,onlyDuration</convert>
+      <convert type="NextEventsPrimeTimeOBl">PrimeTime,onlyDuration</convert>
     </widget>
     <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="760,256" size="488,3" alphatest="blend" zPosition="1" />
     <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="760,514" size="488,3" alphatest="blend" zPosition="1" />
     <eLabel text="-" position="1103,135" size="18,26" font="Regular; 24" halign="center" transparent="1" valign="center" />
-    <widget position="760,72" size="220,132" render="OE_XPiconOCT" source="session.CurrentService" alphatest="blend" zPosition="1" transparent="1" backgroundColor="black" valign="top">
+    <widget position="760,72" size="220,132" render="OE_XPiconOBl" source="session.CurrentService" alphatest="blend" zPosition="1" transparent="1" backgroundColor="black" valign="top">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="Title" render="Label" position="5,5" size="720,34" font="Regular; 28" transparent="1" backgroundColor="black" valign="top" />
@@ -600,7 +607,7 @@
   </screen>
   <!-- ChannelSelection */-->
   <screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" backgroundColor="black" flags="wfNoBorder" zPosition="-1">
-    <widget source="Service" render="OE_XPiconOCT" position="754,63" size="220,132" transparent="1" zPosition="1" alphatest="blend">
+    <widget source="Service" render="OE_XPiconOBl" position="754,63" size="220,132" transparent="1" zPosition="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <eLabel text="EPG Selection" position="14,7" size="273,49" font="Regular; 28" backgroundColor="black" transparent="1" valign="top" zPosition="1" />
@@ -701,7 +708,7 @@
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/volume.png" position="1,1" size="320,70" backgroundColor="black" zPosition="100" transparent="1" alphatest="blend" />
     <eLabel position="85,34" size="147,1" backgroundColor="white" foregroundColor="white" zPosition="101" />
     <widget name="Volume" position="84,33" size="150,3" foregroundColor="meinrot" backgroundColor="black" zPosition="102" transparent="1" />
-    <widget render="OE_VolumeOCT" source="global.CurrentTime" font="Regular; 44" position="236,0" size="85,72" backgroundColor="black" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="101" />
+    <widget render="OE_VolumeOBl" source="global.CurrentTime" font="Regular; 44" position="236,0" size="85,72" backgroundColor="black" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="101" />
   </screen>
   <screen name="Mute" position="49,39" size="72,72" title="Mute" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap position="1,1" size="70,70" pixmap="Octagon-HD-Style-Black/skin_default/icons/mute.png" zPosition="22" />
@@ -906,19 +913,19 @@
 			</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="7,345" size="576,37" zPosition="6" font="Regular; 25" halign="left" valign="center" transparent="1" backgroundColor="black" noWrap="0" foregroundColor="metrixBlue">
-      <convert type="CPUInfoOCT">CPU Auslastung:$0 Core 1:$1  Core 2:$2</convert>
+      <convert type="CPUInfoOBl">CPU Auslastung:$0 Core 1:$1  Core 2:$2</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="6,394" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" noWrap="0" foregroundColor="metrixYellow">
-      <convert type="ReceiverInfoOCT">FleshInfo</convert>
+      <convert type="ReceiverInfoOBl">FleshInfo</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="5,444" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" noWrap="0" foregroundColor="metrixGreen">
-      <convert type="ReceiverInfoOCT">MemTotal</convert>
+      <convert type="ReceiverInfoOBl">MemTotal</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="5,493" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="1" backgroundColor="black" noWrap="0" foregroundColor="metrixSelection">
-      <convert type="ReceiverInfoOCT">HddInfo,Long</convert>
+      <convert type="ReceiverInfoOBl">HddInfo,Long</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="5,540" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="1" backgroundColor="black" noWrap="0" foregroundColor="white">
-      <convert type="ReceiverInfoOCT">UsbInfo,Long</convert>
+      <convert type="ReceiverInfoOBl">UsbInfo,Long</convert>
     </widget>
     <eLabel name="" position="5,343" size="592,235" backgroundColor="black" zPosition="-5" />
   </screen>
@@ -1015,7 +1022,7 @@
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_off.png" position="1091,685" size="49,24" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_on.png" position="1091,685" size="49,24" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRangeOCT">721,1980</convert>
+      <convert type="ValueRangeOBl">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="Label" font="Regular; 20" position="879,589" size="60,25" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
@@ -1556,7 +1563,7 @@
     <widget name="more_text" position="332,67" size="150,30" zPosition="3" text="MORE" font="Regular; 25" halign="center" backgroundColor="black" transparent="1" />
     <widget name="date" position="469,67" size="250,30" font="Regular;20" valign="center" halign="right" transparent="1" />
     <widget name="list" position="24,112" size="690,537" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
-    <widget source="Event" render="OE_RunningTextOCT" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="753,109" size="513,540" font="Regular; 20" backgroundColor="black" transparent="1" valign="top">
+    <widget source="Event" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="753,109" size="513,540" font="Regular; 20" backgroundColor="black" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="40,685" size="12,24" alphatest="blend" />
@@ -1589,8 +1596,8 @@
     <eLabel backgroundColor="black" font="Regular; 40" halign="center" noWrap="1" position="760,54" size="20,50" text="-" transparent="1" valign="center" />
     <widget name="next" backgroundColor="black" foregroundColor="meingruen" font="Regular; 32" halign="center" position="442,54" size="225,50" transparent="1" zPosition="10">
     </widget>
-    <widget alphatest="blend" position="117,64" render="OE_XPiconOCT" size="220,132" source="Title" transparent="1" zPosition="5">
-      <convert type="RefStringOCT">CurrentRef</convert>
+    <widget alphatest="blend" position="117,64" render="OE_XPiconOBl" size="220,132" source="Title" transparent="1" zPosition="5">
+      <convert type="RefStringOBl">CurrentRef</convert>
     </widget>
     <widget backgroundColor="black" itemHeight="50" font="Regular; 24" name="epg_description" position="444,117" size="820,420" transparent="1" />
     <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_off.png" position="181,340" size="56,22" zPosition="1" />
@@ -1640,8 +1647,8 @@
     <widget source="session.CurrentService" render="Label" font="Regular; 28" position="15,377" size="400,95" halign="center" zPosition="50" backgroundColor="black" transparent="1" noWrap="1" valign="center" foregroundColor="cyan1">
       <convert type="CryptoInfo">VerboseInfo</convert>
     </widget>
-    <widget source="session.CurrentService" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" render="OE_RunningTextOCT" position="110,500" size="200,50" font="Regular; 28" zPosition="4" transparent="1" backgroundColor="black" noWrap="1" halign="center" valign="center" foregroundColor="cyan1">
-      <convert type="ServiceNameOCT">%s / %O / %F %p %Y %f</convert>
+    <widget source="session.CurrentService" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" render="OE_RunningTextOBl" position="110,500" size="200,50" font="Regular; 28" zPosition="4" transparent="1" backgroundColor="black" noWrap="1" halign="center" valign="center" foregroundColor="cyan1">
+      <convert type="ServiceNameOBl">%s / %O / %F %p %Y %f</convert>
     </widget>
     <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/left.png" position="19,275" size="36,36" transparent="1" zPosition="10" />
     <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/right.png" position="385,275" size="36,36" transparent="1" zPosition="10" />
@@ -1702,7 +1709,7 @@
     <widget name="key_blue" position="650,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="1167,685" size="81,40" zPosition="10" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
     <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_EPG.png" alphatest="blend" />
-    <widget position="999,67" size="250,141" render="OE_XPiconOCT" source="session.CurrentService" alphatest="blend" zPosition="1" transparent="1">
+    <widget position="999,67" size="250,141" render="OE_XPiconOBl" source="session.CurrentService" alphatest="blend" zPosition="1" transparent="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
   </screen>
@@ -1729,7 +1736,7 @@
     <widget source="Event" render="Progress" position="92,67" size="350,5" borderWidth="0" pixmap="Octagon-HD-Style-Black/colors/00c10900.png" zPosition="1" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" halign="left" position="21,83" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="OE_RunningTextOCT" size="1240,140" source="Event" transparent="1" valign="top">
+    <widget backgroundColor="black" font="Regular; 20" halign="left" position="21,83" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="OE_RunningTextOBl" size="1240,140" source="Event" transparent="1" valign="top">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget name="lab1" position="20,258" size="1240,395" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="1" />
@@ -1997,7 +2004,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_on.png" position="947,688" size="49,24" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRangeOCT">721,1980</convert>
+      <convert type="ValueRangeOBl">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="Label" font="Regular; 20" position="261,687" size="55,25" halign="right" foregroundColor="white" backgroundColor="black" transparent="1">
@@ -2356,29 +2363,29 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="Frontend" render="Label" position="120,90" size="600,22" zPosition="2" font="Regular;21" backgroundColor="black" halign="center" transparent="1">
-      <convert type="FrontendInfoOCT">SNRdB</convert>
+      <convert type="FrontendInfoOBl">SNRdB</convert>
     </widget>
     <eLabel name="snr" text="SNR:" position="120,120" size=" 80,25" font="Regular;21" halign="right" backgroundColor="black" transparent="1" />
     <widget source="Frontend" render="Progress" position="210,122" size="420,20" borderWidth="1" borderColor="grey" transparent="1">
-      <convert type="FrontendInfoOCT">SNR</convert>
+      <convert type="FrontendInfoOBl">SNR</convert>
     </widget>
     <widget source="Frontend" render="Label" position="640,120" size=" 80,25" font="Regular;21" backgroundColor="black" transparent="1">
-      <convert type="FrontendInfoOCT">SNR</convert>
+      <convert type="FrontendInfoOBl">SNR</convert>
     </widget>
     <eLabel name="ber" text="BER:" position="120,155" size=" 80,25" font="Regular;21" halign="right" backgroundColor="black" transparent="1" />
     <widget source="Frontend" render="Progress" position="210,157" size="420,20" borderWidth="1" borderColor="grey" transparent="1">
-      <convert type="FrontendInfoOCT">BER</convert>
+      <convert type="FrontendInfoOBl">BER</convert>
     </widget>
     <widget source="Frontend" render="Label" position="640,155" size=" 80,25" font="Regular;21" backgroundColor="black" transparent="1">
-      <convert type="FrontendInfoOCT">BER</convert>
+      <convert type="FrontendInfoOBl">BER</convert>
     </widget>
     <eLabel name="lock" text="Lock:" position="120,195" size=" 80,25" font="Regular;21" halign="right" backgroundColor="black" transparent="1" />
     <widget source="Frontend" render="Pixmap" position="210,193" size=" 38,31" zPosition="1" pixmap="skin_default/icons/lock_on.png" alphatest="blend">
-      <convert type="FrontendInfoOCT">LOCK</convert>
+      <convert type="FrontendInfoOBl">LOCK</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="Frontend" render="Pixmap" position="210,193" size=" 38,31" zPosition="1" pixmap="skin_default/icons/lock_off.png" alphatest="blend">
-      <convert type="FrontendInfoOCT">LOCK</convert>
+      <convert type="FrontendInfoOBl">LOCK</convert>
       <convert type="ConditionalShowHide">Invert</convert>
     </widget>
     <eLabel position="120,230" size="600, 1" zPosition="1" backgroundColor="grey" />
@@ -2413,19 +2420,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="249,3" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget source="FrontendInfoOCT" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
-      <convert type="FrontendInfoOCT">TYPE</convert>
-      <convert type="ValueRangeOCT">0,0</convert>
+    <widget source="FrontendInfoOBl" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
+      <convert type="FrontendInfoOBl">TYPE</convert>
+      <convert type="ValueRangeOBl">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="FrontendInfoOCT" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
-      <convert type="FrontendInfoOCT">TYPE</convert>
-      <convert type="ValueRangeOCT">1,1</convert>
+    <widget source="FrontendInfoOBl" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
+      <convert type="FrontendInfoOBl">TYPE</convert>
+      <convert type="ValueRangeOBl">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="FrontendInfoOCT" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
-      <convert type="FrontendInfoOCT">TYPE</convert>
-      <convert type="ValueRangeOCT">2,2</convert>
+    <widget source="FrontendInfoOBl" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="634,512" size="64,64" transparent="1" alphatest="blend">
+      <convert type="FrontendInfoOBl">TYPE</convert>
+      <convert type="ValueRangeOBl">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget name="network" position="42,84" size="600,25" font="Regular;22" backgroundColor="black" transparent="1" />
@@ -4393,16 +4400,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget name="divpic" position="0,0" size="0,0" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
   </screen>
-  <screen name="PluginManager" position="0,0" size="1280,720" title="Plugin manager" flags="wfNoBorder" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="1178,8" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="710,9" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <eLabel text="Plugin manager" position="10,0" size="700,43" font="Regular; 28" backgroundColor="black" transparent="1" />
-    <widget source="list" render="Listbox" position="25,67" size="680,550" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <screen name="PluginManager" position="0,0" size="800,720" title="Plugin manager" flags="wfNoBorder" backgroundColor="black">
+  <widget source="global.CurrentTime" render="Label" position="696,11" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="225,11" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <eLabel text="Plugin manager" position="10,0" size="250,43" font="Regular; 28" backgroundColor="black" transparent="1" />
+  <widget source="list" render="Listbox" position="25,67" size="750,550" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
+    <convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (105,[
 						MultiContentEntryPixmapAlphaTest(pos = (18, 14), size = (48, 48), png = 5), # index 5 is the status pixmap
@@ -4418,18 +4425,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				"itemHeight": 105
 			}
 			</convert>
-    </widget>
-    <widget source="status" render="Label" position="25,629" size="680,25" halign="center" font="Regular;22" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="46,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="362,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="650,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="940,685" size="12,24" alphatest="blend" />
-    <widget source="key_red" render="Label" position="78,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="395,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="685,685" size="240,22" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="975,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" />
-  </screen>
+  </widget>
+  <widget source="status" render="Label" position="25,629" size="750,25" halign="center" font="Regular;22" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="30,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="219,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="414,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="608,685" size="12,24" alphatest="blend" />
+  <widget source="key_red" render="Label" position="47,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <widget source="key_green" render="Label" position="237,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <widget source="key_yellow" render="Label" position="430,685" size="160,22" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <widget source="key_blue" render="Label" position="624,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
+</screen>
   <screen name="PluginManagerInfo" position="50,0" size="800,720" title="Plugin manager activity" flags="wfNoBorder" backgroundColor="black">
     <widget source="global.CurrentTime" render="Label" position="672,67" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Default</convert>
@@ -6140,64 +6147,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <eLabel name="Support" text="Support: @www.octagon-forum.eu" position="38,108" size="560,30" font="Replacement; 22" transparent="0" zPosition="2" halign="center" backgroundColor="black" />
     <ePixmap position="66,140" size="500,1" pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" transparent="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Label" position="118,3" size="170,40" zPosition="6" font="Regular; 25" halign="left" valign="center" transparent="1">
-      <convert type="CpuUsageOCT">CPU : $0</convert>
+      <convert type="CpuUsageOBl">CPU : $0</convert>
     </widget>
   </screen>
   <screen name="QuitMainloopScreen" position="0,-1" size="1280,720" flags="wfNoBorder" backgroundColor="black">
     <ePixmap pixmap="Octagon-HD-Style-Black/menu/start2.png" zPosition="1" position="220,40" size="816,620" alphatest="blend" />
     <widget name="text" position="403,233" size="620,220" font="Regular; 48" halign="center" Valign="center" backgroundColor="black" alphatest="blend" zPosition="5" />
     <widget name="input" position="416,479" size="520,35" font="Regular;22" alphatest="blend" zPosition="5" />
-  </screen>
-  <screen name="SystemMemoryInfo" position="50,90" size="700,580" title="SystemInfo">
-    <widget source="global.CurrentTime" render="Label" position="600,2" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="249,5" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget source="lab1" render="Label" position="116,112" size="458,35" font="Regular;30" transparent="0" zPosition="2" />
-    <widget source="lab2" render="Label" position="117,161" size="458,25" font="Regular;19" transparent="0" zPosition="2" />
-    <widget name="AboutScrollLabel" position="117,194" size="458,376" font="Regular;20" transparent="0" zPosition="1" scrollbarMode="showOnDemand" />
-  </screen>
-  <screen name="SystemNetworkInfo" position="50,90" size="630,580" title="SystemInfo">
-    <widget source="global.CurrentTime" render="Label" position="450,12" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="100,15" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget name="AboutScrollLabel" position="71,92" size="484,255" font="Regular;20" transparent="0" zPosition="1" scrollbarMode="showOnDemand" />
-    <widget source="LabelESSID" render="Label" position="70,358" size="200,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="LabelQuality" render="Label" position="70,393" size="200,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="LabelSignal" render="Label" position="70,428" size="200,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="LabelBitrate" render="Label" position="70,463" size="200,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="LabelEnc" render="Label" position="70,498" size="200,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="ESSID" render="Label" position="245,358" size="310,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="quality" render="Label" position="245,393" size="310,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="signal" render="Label" position="245,428" size="310,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="bitrate" render="Label" position="245,463" size="310,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="enc" render="Label" position="245,498" size="310,25" valign="center" font="Regular;20" transparent="0" />
-    <widget source="IFtext" render="Label" position="70,533" size="120,21" zPosition="10" font="Regular;20" halign="left" transparent="0" />
-    <widget source="IF" render="Label" position="181,533" size="375,21" zPosition="10" font="Regular;20" halign="left" transparent="0" />
-    <widget source="Statustext" render="Label" position="70,554" size="115,26" zPosition="10" font="Regular;20" halign="left" transparent="0" />
-    <widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="190,554" zPosition="10" size="12,24" transparent="0" alphatest="on" />
-  </screen>
-  <screen name="SoftwareUpdateChanges" position="50,0" size="800,720" title="SoftwareUpdateChanges" flags="wfNoBorder" backgroundColor="black">
-    <widget source="Title" render="Label" font="Regular; 28" position="10,0" size="700,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="black" />
-    <widget source="global.CurrentTime" render="Label" position="670,68" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="319,70" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget name="text" position="25,120" size="750,520" font="Regular;21" backgroundColor="black" transparent="1" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="69,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="305,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="539,685" size="12,24" alphatest="blend" />
-    <widget source="key_red" render="Label" position="101,685" size="200,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="337,685" size="200,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="571,685" size="200,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
   </screen>
   <screen name="AC3LipSyncSetup" position="50,0" size="800,720" title="AC3 Lip Sync Setup" flags="wfNoBorder" backgroundColor="black">
     <widget source="Title" render="Label" font="Regular; 28" position="10,0" size="700,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="black" />
@@ -7001,7 +6957,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="black" font="Regular; 24" foregroundColor="white" halign="left" position="205,61" render="Label" size="1050,30" source="Event" transparent="1" zPosition="3">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="20,94" render="OE_RunningTextOCT" shadowColor="#000000" size="1240,185" source="Event" transparent="1" valign="top" zPosition="3">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="20,94" render="OE_RunningTextOBl" shadowColor="#000000" size="1240,185" source="Event" transparent="1" valign="top" zPosition="3">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" foregroundColor="foreground" name="timeline_text" position="20,281" size="1238,30" transparent="1" />
@@ -7088,7 +7044,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="EventName">Name</convert>
     </widget>
     <widget backgroundColor="black" font="Regular;20" foregroundColor="white" halign="left" position="40,685" render="Label" size="240,30" source="Title" transparent="1" zPosition="3" />
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="19,579" render="OE_RunningTextOCT" shadowColor="#000000" size="1240,75" source="Event" transparent="1" zPosition="1">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="19,579" render="OE_RunningTextOBl" shadowColor="#000000" size="1240,75" source="Event" transparent="1" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" position="277,685" size="12,24" />
@@ -7125,7 +7081,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="black" font="Regular; 24" foregroundColor="foreground" halign="left" position="605,66" render="Label" shadowColor="#00605f5e" size="600,30" source="Event" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="428,98" render="OE_RunningTextOCT" shadowColor="#00605f5e" size="830,185" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="428,98" render="OE_RunningTextOBl" shadowColor="#00605f5e" size="830,185" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget CoolBackColorSel="#000000" CoolBarColor="#3B98C9" CoolBarHPos="5" CoolBarHigh="18" CoolBarPos="260" CoolBarSize="150" CoolDurationPos="1085" CoolDurationSize="105" CoolEventColor="#FFFFFF" CoolEventFont="Regular;22" CoolEventHPos="2" CoolEventPos="430" CoolEventSize="645" CoolFont="Regular;22" CoolRecAlarmCol="#00000099" CoolRecColor="#9F1313" CoolServiceColor="#00ff0033" CoolServiceFont="Regular;22" CoolServiceHPos="2" CoolServicePos="5" CoolServiceSize="245" CoolTimeHPos="2" CoolTimePos="265" CoolTimeSize="150" CoolTunerCol="#606060" backgroundColor="black" foregroundColor="foreground" itemHeight="28" name="list" position="17,288" selectionPixmap="Octagon-HD-Style-Black/selection/CoolCursor.png" size="1240,365" transparent="1" zPosition="25" />
@@ -7164,7 +7120,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="black" font="Regular; 24" foregroundColor="white" halign="left" position="624,67" render="Label" size="600,30" source="Event" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="450,95" render="OE_RunningTextOCT" shadowColor="#000000" size="790,185" source="Event" transparent="0" valign="top" zPosition="1">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="450,95" render="OE_RunningTextOBl" shadowColor="#000000" size="790,185" source="Event" transparent="0" valign="top" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" name="timeline_text" position="20,284" size="1240,30" transparent="1" />
@@ -7218,7 +7174,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="background" font="Regular;24" halign="left" position="18,435" render="Label" shadowColor="#444444" size="1240,30" source="Event" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="17,467" render="OE_RunningTextOCT" shadowColor="#00605f5e" size="1240,185" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="17,467" render="OE_RunningTextOBl" shadowColor="#00605f5e" size="1240,185" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget CoolBackColor="#000000" CoolBackColorSel="#000000" CoolDayColor="#FF6600" CoolDayPos="0" CoolDaySize="50" CoolEventColor="#FFFFFF" CoolEventFont="Regular;22" CoolEventPos="150" CoolFont="Regular;22" CoolRecAlarmCol="#00000099" CoolRecColor="#9F1313" CoolTimeColor="#3B98C9" CoolTimePos="70" CoolTimeSize="70" backgroundColor="black" foregroundColor="foreground" itemHeight="28" name="list" position="423,69" selectionPixmap="Octagon-HD-Style-Black/selection/CoolCursor.png" size="835,360" transparent="1" zPosition="25" />
@@ -7266,7 +7222,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="EventName">Name</convert>
     </widget>
     <widget backgroundColor="black" font="Regular;20" foregroundColor="white" halign="left" position="40,685" render="Label" size="240,30" source="Title" transparent="1" zPosition="3" />
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="16,578" render="OE_RunningTextOCT" shadowColor="#000000" size="1245,75" source="Event" transparent="1" zPosition="1">
+    <widget backgroundColor="black" font="Regular; 18" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="16,578" render="OE_RunningTextOBl" shadowColor="#000000" size="1245,75" source="Event" transparent="1" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" position="275,685" size="12,24" />
@@ -7307,7 +7263,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget pixmap="Octagon-HD-Style-Black/colors/00c10900.png" position="154,77" render="Progress" size="250,4" source="Event" transparent="1" zPosition="2">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="36,150" render="OE_RunningTextOCT" shadowColor="#00605f5e" size="480,261" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="black" font="Regular;20" foregroundColor="white" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" position="36,150" render="OE_RunningTextOBl" shadowColor="#00605f5e" size="480,261" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget CoolBackColorSel="#000000" CoolBar="0" CoolBarColor="#3B98C9" CoolCurrentCol="blue" CoolDurationPos="650" CoolDurationSize="40" CoolEventColor="#C6C6C6" CoolEventFont="Regular;18" CoolEventHPos="3" CoolEventPos="240" CoolEventSize="320" CoolFont="Regular;22" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="#00000099" CoolRecColor="#9F1313" CoolServiceColor="#00ff0033" CoolServiceFont="Regular;21" CoolServiceHPos="1" CoolServicePos="1" CoolServiceSize="230" CoolTime="1" CoolTimeHPos="3" CoolTimePos="580" CoolTimeSize="130" CoolTunerCol="#606060" backgroundColor="black" foregroundColor="foreground" itemHeight="28" name="list" position="543,70" selectionPixmap="Octagon-HD-Style-Black/selection/CoolCursor.png" size="700,580" transparent="1" zPosition="25" />
@@ -8463,22 +8419,139 @@ oder alle = Liste
     </widget>
     <eLabel name="blacklabel" position="1,612" size="800, 100" />
   </screen>
-<screen name="AddonsFileBrowser" title="Manual Addon Installer Filebrowser" backgroundColor="black" position="50,55" size="800,650">
-
-  <widget name="filelist" itemHeight="50" font="Regular; 32" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" position="15,54" size="770,530" transparent="1" />
-  
-  <widget source="key_red" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="73,601" size="260,40" transparent="1" zPosition="1" />
-  <widget source="key_blue" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="498,601" size="260,40" transparent="1" zPosition="1" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="469,606" size="12,24" alphatest="blend" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="49,606" size="12,24" alphatest="blend" />
-  <widget backgroundColor="black" font="Regular; 26" halign="left" position="716,4" render="Label" size="75,35" source="global.CurrentTime" transparent="1" valign="top">
-    <convert type="ClockToText">Format:%H:%M</convert>
-  </widget>
-  <widget backgroundColor="black" font="Regular; 26" halign="right" position="539,4" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
-    <convert type="ClockToText">Format:%e. %b</convert>
-  </widget>
-  <widget backgroundColor="black" font="Regular; 26" halign="right" position="365,4" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
-    <convert type="ClockToText">Format:%A</convert>
-  </widget>
-</screen>
+  <screen name="AddonsFileBrowser" title="Manual Addon Installer Filebrowser" backgroundColor="black" position="50,55" size="800,650">
+    <widget name="filelist" itemHeight="50" font="Regular; 32" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" position="15,54" size="770,530" transparent="1" />
+    <widget source="key_red" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="73,601" size="260,40" transparent="1" zPosition="1" />
+    <widget source="key_blue" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="498,601" size="260,40" transparent="1" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="469,606" size="12,24" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="49,606" size="12,24" alphatest="blend" />
+    <widget backgroundColor="black" font="Regular; 26" halign="left" position="716,4" render="Label" size="75,35" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="black" font="Regular; 26" halign="right" position="539,4" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="black" font="Regular; 26" halign="right" position="365,4" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+  </screen>
+  <screen name="SoftwareManagerSetup" position="center,center" size="560,440" title="SoftwareManager setup">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+    <widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" />
+    <widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+  </screen>
+  <screen name="SoftwareManagerInfo" position="center,center" size="560,440" title="SoftwareManager information">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+    <widget source="list" render="Listbox" position="5,50" size="550,340" scrollbarMode="showOnDemand" selectionDisabled="0">
+      <convert type="TemplatedMultiContent"> 
+	{"template": 
+	[ MultiContentEntryText(pos = (5, 0), size = (540, 26), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_CENTER, text = 0), # index 0 is the name ],"fonts": [gFont("Regular", 24),gFont("Regular", 22)],"itemHeight": 26 }</convert>
+    </widget>
+    <widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+  </screen>
+  <screen name="PluginManagerInfo" position="center,center" size="560,450" title="Plugin manager activity information">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget source="list" render="Listbox" position="5,50" size="550,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+      <convert type="TemplatedMultiContent"> 
+	{"template": [ 
+	MultiContentEntryText(pos = (50, 0), size = (150, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+	MultiContentEntryText(pos = (50, 27), size = (540, 23), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
+	MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
+	MultiContentEntryPixmapAlphaTest(pos = (0, 48), size = (550, 2), png = 3), # index 3 is the div pixmap ],"fonts": [gFont("Regular", 24),gFont("Regular", 22)],"itemHeight": 50} </convert>
+    </widget>
+    <widget source="status" render="Label" position="5,408" zPosition="10" size="550,44" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+  </screen>
+  <screen name="PluginManagerHelp" position="center,center" size="560,450" title="Plugin manager help">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="list" render="Listbox" position="5,50" size="550,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+      <convert type="TemplatedMultiContent"> 
+	{"template": [
+	MultiContentEntryText(pos = (50, 0), size = (540, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+	MultiContentEntryText(pos = (50, 27), size = (540, 23), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
+	MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
+	MultiContentEntryPixmapAlphaTest(pos = (0, 48), size = (550, 2), png = 3), # index 3 is the div pixmap ],"fonts": [gFont("Regular", 24),gFont("Regular", 22)],"itemHeight": 50 } </convert>
+    </widget>
+    <widget source="status" render="Label" position="5,408" zPosition="10" size="550,44" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+  </screen>
+  <screen name="PluginDetails" position="center,center" size="600,440" title="Plugin details">\
+	<ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" /><ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" /><widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" /><widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" /><widget source="author" render="Label" position="10,50" size="500,25" zPosition="10" font="Regular;21" transparent="1" /><widget name="statuspic" position="550,40" size="48,48" alphatest="on" /><widget name="divpic" position="0,80" size="600,2" alphatest="on" /><widget name="detailtext" position="10,90" size="270,330" zPosition="10" font="Regular;21" transparent="1" halign="left" valign="top" /><widget name="screenshot" position="290,90" size="300,330" alphatest="on" /></screen>
+  <screen name="UpdatePlugin" position="center,center" size="550,300">
+    <widget name="activityslider" position="0,0" size="550,5" />
+    <widget name="slider" position="0,150" size="550,30" />
+    <widget source="package" render="Label" position="10,30" size="540,20" font="Regular;18" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+    <widget source="status" render="Label" position="10,180" size="540,100" font="Regular;20" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+  </screen>
+  <screen name="IPKGMenu" position="center,center" size="560,400" title="Select upgrade source to edit.">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget name="filelist" position="5,50" size="550,340" scrollbarMode="showOnDemand" />
+  </screen>
+  <screen name="IPKGSource" position="center,center" size="560,80" title="Edit upgrade source url.">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget name="text" position="5,50" size="550,25" font="Regular;20" backgroundColor="background" foregroundColor="meingrau" />
+  </screen>
+  <screen name="IpkgInstaller" position="center,center" size="550,450" title="Install extensions">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+    <widget name="list" position="5,50" size="540,360" />
+    <widget source="introduction" render="Label" position="5,420" zPosition="10" size="550,30" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+  </screen>
+  <screen name="UpdatePluginMenu" position="0,0" size="800,720" title="" flags="wfNoBorder" backgroundColor="black">
+    <widget source="global.CurrentTime" render="Label" position="695,12" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="229,11" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Softwaremanager" position="10,0" size="250,40" font="Regular; 28" backgroundColor="black" transparent="1" />
+    <widget source="menu" render="Listbox" position="15,60" size="770,290" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+      <convert type="TemplatedMultiContent">
+                     {"template": [ MultiContentEntryText(pos = (15, 2), size = (750, 55), flags = RT_HALIGN_LEFT, text = 1) ], 
+                     "fonts": [gFont("Regular", 22)], 
+                     "itemHeight": 35
+                     }
+		  </convert>
+    </widget>
+    <widget source="menu" render="Listbox" position="15,360" size="770,290" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+      <convert type="TemplatedMultiContent">
+                     {"template": [ MultiContentEntryText(pos = (15, 5), size = (750, 270), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2),# index 2 is the Description,
+                     ],
+                     "fonts": [gFont("Regular", 22)], 
+                     "itemHeight": 270
+                     }
+		  </convert>
+    </widget>
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/key_red.png" position="46,685" size="12,24" alphatest="blend" />
+    <widget source="key_red" render="Label" position="78,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
+  </screen>
 </skin>

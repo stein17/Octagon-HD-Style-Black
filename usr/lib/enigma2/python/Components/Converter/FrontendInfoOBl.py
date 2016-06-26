@@ -3,7 +3,7 @@ from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
 
-class FrontendInfoOCT(Converter, object):
+class FrontendInfoOBl(Converter, object):
     BER = 0
     SNR = 1
     AGC = 2
