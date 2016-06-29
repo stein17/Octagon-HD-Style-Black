@@ -4401,15 +4401,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
   </screen>
   <screen name="PluginManager" position="0,0" size="800,720" title="Plugin manager" flags="wfNoBorder" backgroundColor="black">
-  <widget source="global.CurrentTime" render="Label" position="696,11" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="225,11" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
-    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel text="Plugin manager" position="10,0" size="250,43" font="Regular; 28" backgroundColor="black" transparent="1" />
-  <widget source="list" render="Listbox" position="25,67" size="750,550" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
-    <convert type="TemplatedMultiContent">
+    <widget source="global.CurrentTime" render="Label" position="696,11" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="225,11" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Plugin manager" position="10,0" size="250,43" font="Regular; 28" backgroundColor="black" transparent="1" />
+    <widget source="list" render="Listbox" position="25,67" size="750,550" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
+      <convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (105,[
 						MultiContentEntryPixmapAlphaTest(pos = (18, 14), size = (48, 48), png = 5), # index 5 is the status pixmap
@@ -4425,18 +4425,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				"itemHeight": 105
 			}
 			</convert>
-  </widget>
-  <widget source="status" render="Label" position="25,629" size="750,25" halign="center" font="Regular;22" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="30,685" size="12,24" alphatest="blend" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="219,685" size="12,24" alphatest="blend" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="414,685" size="12,24" alphatest="blend" />
-  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="608,685" size="12,24" alphatest="blend" />
-  <widget source="key_red" render="Label" position="47,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-  <widget source="key_green" render="Label" position="237,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-  <widget source="key_yellow" render="Label" position="430,685" size="160,22" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-  <widget source="key_blue" render="Label" position="624,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-  <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
-</screen>
+    </widget>
+    <widget source="status" render="Label" position="25,629" size="750,25" halign="center" font="Regular;22" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="30,685" size="12,24" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="219,685" size="12,24" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="414,685" size="12,24" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="608,685" size="12,24" alphatest="blend" />
+    <widget source="key_red" render="Label" position="47,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="237,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="430,685" size="160,22" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_blue" render="Label" position="624,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
+  </screen>
   <screen name="PluginManagerInfo" position="50,0" size="800,720" title="Plugin manager activity" flags="wfNoBorder" backgroundColor="black">
     <widget source="global.CurrentTime" render="Label" position="672,67" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Default</convert>
@@ -8421,8 +8421,8 @@ oder alle = Liste
   </screen>
   <screen name="AddonsFileBrowser" title="Manual Addon Installer Filebrowser" backgroundColor="black" position="50,55" size="800,650">
     <widget name="filelist" itemHeight="50" font="Regular; 32" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" position="15,54" size="770,530" transparent="1" />
-    <widget source="key_red" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="73,601" size="260,40" transparent="1" zPosition="1" />
-    <widget source="key_blue" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="498,601" size="260,40" transparent="1" zPosition="1" />
+    <widget source="key_red" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="72,606" size="260,25" transparent="1" zPosition="1" />
+    <widget source="key_blue" render="Label" backgroundColor="black" font="Regular; 28" halign="left" valign="center" position="496,606" size="260,25" transparent="1" zPosition="1" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="469,606" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="49,606" size="12,24" alphatest="blend" />
     <widget backgroundColor="black" font="Regular; 26" halign="left" position="716,4" render="Label" size="75,35" source="global.CurrentTime" transparent="1" valign="top">
@@ -8435,52 +8435,52 @@ oder alle = Liste
       <convert type="ClockToText">Format:%A</convert>
     </widget>
   </screen>
-  <screen name="SoftwareManagerSetup" position="center,center" size="560,440" title="SoftwareManager setup">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
-    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
-    <widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" />
-    <widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
-  </screen>
-  <screen name="SoftwareManagerInfo" position="center,center" size="560,440" title="SoftwareManager information">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
-    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
-    <widget source="list" render="Listbox" position="5,50" size="550,340" scrollbarMode="showOnDemand" selectionDisabled="0">
-      <convert type="TemplatedMultiContent"> 
+  <screen name="SoftwareManagerSetup" position="360,140" size="650,440" title="SoftwareManager setup">
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="9,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="167,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="326,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="482,5" size="12,24" alphatest="on" />
+  <widget source="key_red" render="Label" position="24,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  <widget source="key_green" render="Label" position="183,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+  <widget source="key_yellow" render="Label" position="340,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+  <widget source="key_blue" render="Label" position="497,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+  <widget name="config" position="5,50" size="640,350" scrollbarMode="showOnDemand" />
+  <widget source="introduction" render="Label" position="5,410" size="640,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+</screen>
+  <screen name="SoftwareManagerInfo" position="center,center" size="650,440" title="SoftwareManager information">
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="9,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="167,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="326,5" size="12,24" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="482,5" size="12,24" alphatest="on" />
+  <widget source="key_red" render="Label" position="24,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  <widget source="key_green" render="Label" position="183,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+  <widget source="key_yellow" render="Label" position="340,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+  <widget source="key_blue" render="Label" position="497,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+  <widget source="list" render="Listbox" position="5,50" size="640,340" scrollbarMode="showOnDemand" selectionDisabled="0">
+    <convert type="TemplatedMultiContent"> 
 	{"template": 
 	[ MultiContentEntryText(pos = (5, 0), size = (540, 26), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_CENTER, text = 0), # index 0 is the name ],"fonts": [gFont("Regular", 24),gFont("Regular", 22)],"itemHeight": 26 }</convert>
-    </widget>
-    <widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
-  </screen>
-  <screen name="PluginManagerInfo" position="center,center" size="560,450" title="Plugin manager activity information">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget source="list" render="Listbox" position="5,50" size="550,350" scrollbarMode="showOnDemand" selectionDisabled="1">
-      <convert type="TemplatedMultiContent"> 
+  </widget>
+  <widget source="introduction" render="Label" position="5,410" size="640,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
+</screen>
+  <screen name="PluginManagerInfo" position="center,center" size="660,450" title="Plugin manager activity information">
+ <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="6,5" size="12,25" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="200,5" size="12,25" alphatest="on" />
+  <widget source="key_red" render="Label" position="28,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  <widget source="key_green" render="Label" position="225,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+  <widget source="list" render="Listbox" position="5,50" size="650,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+    <convert type="TemplatedMultiContent"> 
 	{"template": [ 
 	MultiContentEntryText(pos = (50, 0), size = (150, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 	MultiContentEntryText(pos = (50, 27), size = (540, 23), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
 	MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
 	MultiContentEntryPixmapAlphaTest(pos = (0, 48), size = (550, 2), png = 3), # index 3 is the div pixmap ],"fonts": [gFont("Regular", 24),gFont("Regular", 22)],"itemHeight": 50} </convert>
-    </widget>
-    <widget source="status" render="Label" position="5,408" zPosition="10" size="550,44" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  </screen>
-  <screen name="PluginManagerHelp" position="center,center" size="560,450" title="Plugin manager help">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  </widget>
+  <widget source="status" render="Label" position="5,408" zPosition="10" size="650,44" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+</screen>
+  <screen name="PluginManagerHelp" position="360,135" size="560,450" title="Plugin manager help">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="6,5" size="12,24" alphatest="on" />
+    <widget source="key_red" render="Label" position="29,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
     <widget source="list" render="Listbox" position="5,50" size="550,350" scrollbarMode="showOnDemand" selectionDisabled="1">
       <convert type="TemplatedMultiContent"> 
 	{"template": [
@@ -8491,8 +8491,17 @@ oder alle = Liste
     </widget>
     <widget source="status" render="Label" position="5,408" zPosition="10" size="550,44" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
   </screen>
-  <screen name="PluginDetails" position="center,center" size="600,440" title="Plugin details">\
-	<ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" /><ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" /><widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" /><widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" /><widget source="author" render="Label" position="10,50" size="500,25" zPosition="10" font="Regular;21" transparent="1" /><widget name="statuspic" position="550,40" size="48,48" alphatest="on" /><widget name="divpic" position="0,80" size="600,2" alphatest="on" /><widget name="detailtext" position="10,90" size="270,330" zPosition="10" font="Regular;21" transparent="1" halign="left" valign="top" /><widget name="screenshot" position="290,90" size="300,330" alphatest="on" /></screen>
+  <screen name="PluginDetails" position="center,center" size="600,440" title="Plugin details">
+<ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="6,5" size="12,25" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="200,5" size="12,25" alphatest="on" />
+  <widget source="key_red" render="Label" position="28,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  <widget source="key_green" render="Label" position="225,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+<widget source="author" render="Label" position="10,50" size="500,25" zPosition="10" font="Regular;21" transparent="1" />
+<widget name="statuspic" position="550,40" size="48,48" alphatest="on" />
+<widget name="divpic" position="0,80" size="600,2" alphatest="on" />
+<widget name="detailtext" position="10,90" size="270,330" zPosition="10" font="Regular;21" transparent="1" halign="left" valign="top" />
+<widget name="screenshot" position="290,90" size="300,330" alphatest="on" />
+</screen>
   <screen name="UpdatePlugin" position="center,center" size="550,300">
     <widget name="activityslider" position="0,0" size="550,5" />
     <widget name="slider" position="0,150" size="550,30" />
@@ -8500,30 +8509,30 @@ oder alle = Liste
     <widget source="status" render="Label" position="10,180" size="540,100" font="Regular;20" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
   </screen>
   <screen name="IPKGMenu" position="center,center" size="560,400" title="Select upgrade source to edit.">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget name="filelist" position="5,50" size="550,340" scrollbarMode="showOnDemand" />
+   <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="6,5" size="12,25" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="200,5" size="12,25" alphatest="on" />
+  <widget source="key_red" render="Label" position="28,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+  <widget source="key_green" render="Label" position="225,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+  <widget name="filelist" position="5,50" size="550,340" scrollbarMode="showOnDemand" />
+</screen>
+  <screen name="IPKGSource" position="center,center" size="760,80" title="Edit upgrade source url.">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="6,5" size="12,25" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="200,5" size="12,25" alphatest="on" />
+    <widget source="key_red" render="Label" position="28,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="225,5" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget name="text" position="5,50" size="750,25" font="Regular;20" backgroundColor="background" foregroundColor="meingrau" />
   </screen>
-  <screen name="IPKGSource" position="center,center" size="560,80" title="Edit upgrade source url.">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget name="text" position="5,50" size="550,25" font="Regular;20" backgroundColor="background" foregroundColor="meingrau" />
-  </screen>
-  <screen name="IpkgInstaller" position="center,center" size="550,450" title="Install extensions">
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
-    <widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
-    <widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
-    <widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
-    <widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
-    <widget name="list" position="5,50" size="540,360" />
-    <widget source="introduction" render="Label" position="5,420" zPosition="10" size="550,30" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+  <screen name="IpkgInstaller" position="265,135" size="760,450" title="Install extensions">
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/red.png" position="9,5" size="12,24" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/green.png" position="202,5" size="12,24" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/yellow.png" position="397,5" size="12,24" alphatest="on" />
+    <ePixmap pixmap="Octagon-HD-Style-Black/buttons/blue.png" position="591,5" size="12,24" alphatest="on" />
+    <widget source="key_red" render="Label" position="32,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un9F1313" transparent="1" />
+    <widget source="key_green" render="Label" position="226,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un1f771f" transparent="1" />
+    <widget source="key_yellow" render="Label" position="422,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="una08500" transparent="1" />
+    <widget source="key_blue" render="Label" position="616,5" zPosition="1" size="140,24" font="Regular;20" halign="center" valign="center" backgroundColor="un18188b" transparent="1" />
+    <widget name="list" position="5,50" size="750,360" />
+    <widget source="introduction" render="Label" position="5,420" zPosition="10" size="750,30" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
   </screen>
   <screen name="UpdatePluginMenu" position="0,0" size="800,720" title="" flags="wfNoBorder" backgroundColor="black">
     <widget source="global.CurrentTime" render="Label" position="695,12" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
@@ -8553,5 +8562,148 @@ oder alle = Liste
     <ePixmap pixmap="Octagon-HD-Style-Black/buttons/key_red.png" position="46,685" size="12,24" alphatest="blend" />
     <widget source="key_red" render="Label" position="78,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
+  </screen>
+  <!-- YahooWeather mod -->
+  <screen name="YahooWeather" position="center,center" size="1280,720" title="Yahoo Weather" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/YahooWeather/bg.png" alphatest="blend" transparent="1" zPosition="-1" />
+    <ePixmap position="55,12" size="40,30" pixmap="Octagon-HD-Style-Black/YahooWeather/yh.png" alphatest="blend" transparent="1" />
+    <!-- Data Provider -->
+    <widget name="lab1b" position="95,12" halign="center" size="200,32" zPosition="1" font="weather;28" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <!-- BigIcon Weather -->
+    <widget name="lab5" position="56,67" size="215,200" zPosition="1" alphatest="blend" transparent="1" backgroundColor="black" />
+    <!-- Time -->
+    <widget source="global.CurrentTime" render="Label" position="402,81" size="185,46" zPosition="2" font="weather;40" valign="top" halign="left" foregroundColor="un808080" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format %H:%M </convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="514,80" size="36,30" zPosition="2" font="weather;22" foregroundColor="un808080" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format %S</convert>
+    </widget>
+    <ePixmap position="720,679" size="38,38" pixmap="Octagon-HD-Style-Black/YahooWeather/Sandclock.png" alphatest="blend" transparent="1" />
+    <!-- City -->
+    <widget name="lab2" position="374,140" halign="center" size="196,110" zPosition="10" font="weather;30" valign="center" foregroundColor="black" transparent="1" backgroundColor="meindunkelgelb" />
+    <!-- Temperature -->
+    <ePixmap position="364,130" size="219,130" pixmap="Octagon-HD-Style-Black/YahooWeather/City.png" alphatest="blend" transparent="1" />
+    <ePixmap position="68,263" size="17,50" pixmap="Octagon-HD-Style-Black/YahooWeather/temp.png" alphatest="blend" transparent="1" />
+    <widget name="lab4" position="75,275" halign="right" size="82,42" zPosition="1" font="weather;36" foregroundColor="white" backgroundColor="black" valign="top" transparent="1" />
+    <widget name="lab4b" position="160,275" halign="left" size="30,26" zPosition="1" font="Regular; 22" foregroundColor="meinrot" backgroundColor="black" valign="top" transparent="1" />
+    <!-- Description Time -->
+    <widget name="lab6" position="194,281" halign="left" size="470,36" zPosition="1" font="weather;28" valign="top" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- Wind -->
+    <ePixmap position="60,346" size="30,40" pixmap="Octagon-HD-Style-Black/YahooWeather/wind.png" alphatest="blend" transparent="1" />
+    <widget name="lab12b" position="100,340" halign="left" size="410,24" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <eLabel position="56,324" size="520,1" backgroundColor="un303030" />
+    <eLabel position="56,324" size="520,1" backgroundColor="un404040" />
+    <!-- Humidity -->
+    <widget name="lab7" position="105,387" halign="left" size="155,26" zPosition="1" font="weather;22" valign="top" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab7b" position="285,387" halign="left" size="300,26" zPosition="1" font="weather;22" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <ePixmap position="64,378" size="30,40" pixmap="Octagon-HD-Style-Black/YahooWeather/Humidity.png" alphatest="blend" transparent="1" />
+    <!-- Pressure -->
+    <widget name="lab8" position="105,435" halign="left" size="150,24" zPosition="1" font="weather;22" valign="top" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab8b" position="285,435" halign="left" size="300,24" zPosition="1" font="weather;22" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <ePixmap position="62,429" size="38,38" pixmap="Octagon-HD-Style-Black/YahooWeather/Pressure.png" alphatest="blend" transparent="1" />
+    <!-- Sunrise -->
+    <!-- Visibility -->
+    <widget name="lab9" position="105,483" halign="left" size="150,24" zPosition="1" font="weather;22" valign="top" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab9b" position="285,483" halign="left" size="300,24" zPosition="1" font="weather;22" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <ePixmap position="60,483" size="39,20" pixmap="Octagon-HD-Style-Black/YahooWeather/Visibility.png" alphatest="blend" transparent="1" />
+    <!-- Sunrise -->
+    <widget name="lab10" position="105,530" halign="left" size="150,24" zPosition="1" font="weather;22" valign="top" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab10b" position="285,530" halign="left" size="300,24" zPosition="1" font="weather;22" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <ePixmap position="60,530" size="40,40" pixmap="Octagon-HD-Style-Black/YahooWeather/sunrise.png" alphatest="blend" transparent="1" />
+    <!-- Sunset -->
+    <widget name="lab11" position="105,580" halign="left" size="150,24" zPosition="1" font="weather;22" valign="top" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab11b" position="285,580" halign="left" size="300,24" zPosition="1" font="weather;22" foregroundColor="une5b243" backgroundColor="black" valign="top" transparent="1" />
+    <ePixmap position="60,579" size="40,40" pixmap="Octagon-HD-Style-Black/YahooWeather/sunset.png" alphatest="blend" transparent="1" />
+    <!-- UpDate Meteo -->
+    <widget name="lab3" position="690,674" size="540,40" zPosition="3" font="weather;24" halign="center" valign="center" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <!-- Data Forecast-->
+    <widget name="5day" position="298,12" size="400,32" zPosition="1" font="weather;28" foregroundColor="foreground" backgroundColor="black" halign="center" valign="top" transparent="1" />
+    <!-- ForeCast 1Day Pic -->
+    <widget name="lab17" position="680,95" size="80,80" zPosition="1" alphatest="blend" transparent="1" />
+    <!-- ForeCast 1Day Day -->
+    <widget name="lab13" position="764,87" halign="left" size="301,32" zPosition="1" font="weather;30" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 1Day Description -->
+    <widget name="lab16" position="764,117" halign="left" size="448,26" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 1Day Temp Heigh -->
+    <widget name="lab14" position="765,145" halign="left" size="65,28" zPosition="1" font="Regular; 20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab14b" position="833,145" halign="left" size="90,28" zPosition="1" font="Regular; 20" foregroundColor="meinrot" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 1Day Temp Low -->
+    <widget name="lab15" position="925,145" halign="left" size="60,28" zPosition="1" font="Regular; 20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab15b" position="987,145" halign="left" size="90,28" zPosition="1" font="Regular; 20" foregroundColor="un21b0cf" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 1Day Date -->
+    <widget name="daydate0" position="1065,87" valign="center" halign="right" size="132,28" zPosition="1" font="Regular;18" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <eLabel position="685,182" size="535,1" backgroundColor="un303030" />
+    <eLabel position="685,182" size="535,1" backgroundColor="un404040" />
+    <!-- ForeCast 2Day Pic -->
+    <widget name="lab22" position="680,199" size="80,80" zPosition="1" alphatest="blend" transparent="1" />
+    <!-- ForeCast 2Day Day -->
+    <widget name="lab18" position="766,192" halign="left" size="301,32" zPosition="1" font="weather;30" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 2Day Description -->
+    <widget name="lab21" position="766,222" halign="left" size="448,26" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 2Day Temp Heigh -->
+    <widget name="lab19" position="766,251" halign="left" size="65,28" zPosition="1" font="Regular; 20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab19b" position="833,250" halign="left" size="90,28" zPosition="1" font="Regular; 20" foregroundColor="meinrot" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 2Day Temp Low -->
+    <widget name="lab20" position="925,250" halign="left" size="65,28" zPosition="1" font="Regular; 20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="lab20b" position="992,250" halign="left" size="90,28" zPosition="1" font="Regular; 20" foregroundColor="un21b0cf" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 2Day Date -->
+    <widget name="daydate1" position="1067,192" valign="center" halign="right" size="132,28" zPosition="1" font="Regular;18" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <eLabel position="685,285" size="535,1" backgroundColor="un303030" />
+    <eLabel position="685,285" size="535,1" backgroundColor="un404040" />
+    <!-- ForeCast 3Day Pic -->
+    <widget name="3lab22" position="680,306" size="80,80" zPosition="1" alphatest="blend" transparent="1" />
+    <!-- ForeCast 3Day Day -->
+    <widget name="3lab18" position="765,296" halign="left" size="301,32" zPosition="1" font="weather;30" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 3Day Description -->
+    <widget name="3lab21" position="765,327" halign="left" size="448,26" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 3Day Temp Heigh -->
+    <widget name="3lab19" position="765,355" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="3lab19b" position="833,354" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="meinrot" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 3Day Temp Low -->
+    <widget name="3lab20" position="924,355" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="3lab20b" position="991,355" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="un21b0cf" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 3Day Date -->
+    <widget name="daydate2" position="1066,296" valign="center" halign="right" size="132,28" zPosition="1" font="Regular;18" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <eLabel position="685,393" size="535,1" backgroundColor="un303030" />
+    <eLabel position="685,393" size="535,1" backgroundColor="un404040" />
+    <!-- ForeCast 4Day Pic -->
+    <widget name="4lab22" position="680,413" size="80,80" zPosition="1" alphatest="blend" transparent="1" />
+    <!-- ForeCast 4Day Day -->
+    <widget name="4lab18" position="765,403" halign="left" size="301,32" zPosition="1" font="weather;30" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 4Day Description -->
+    <widget name="4lab21" position="765,433" halign="left" size="448,26" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 4Day Temp Heigh -->
+    <widget name="4lab19" position="765,461" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="4lab19b" position="832,461" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="meinrot" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 4Day Temp Low -->
+    <widget name="4lab20" position="924,461" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="4lab20b" position="991,461" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="un21b0cf" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 4Day Date -->
+    <widget name="daydate3" position="1066,402" valign="center" halign="right" size="132,28" zPosition="1" font="Regular;18" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <eLabel position="685,498" size="535,1" backgroundColor="un303030" />
+    <eLabel position="685,498" size="535,1" backgroundColor="un404040" />
+    <!-- ForeCast 5Day Pic -->
+    <widget name="5lab22" position="680,519" size="80,80" zPosition="1" alphatest="blend" transparent="1" />
+    <!-- ForeCast 5Day Day -->
+    <widget name="5lab18" position="765,509" halign="left" size="301,32" zPosition="1" font="weather;30" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 5Day Description -->
+    <widget name="5lab21" position="765,539" halign="left" size="448,26" zPosition="1" font="weather;24" foregroundColor="une5b243" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 5Day Temp Heigh -->
+    <widget name="5lab19" position="765,567" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="5lab19b" position="832,567" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="meinrot" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 5Day Temp Low -->
+    <widget name="5lab20" position="925,567" halign="left" size="65,28" zPosition="1" font="Regular;20" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <widget name="5lab20b" position="992,567" halign="left" size="90,28" zPosition="1" font="Regular;20" foregroundColor="un21b0cf" backgroundColor="black" transparent="1" />
+    <!-- ForeCast 5Day Date -->
+    <widget name="daydate4" position="1068,508" valign="center" halign="right" size="132,28" zPosition="1" font="Regular;18" foregroundColor="grey" backgroundColor="black" transparent="1" />
+    <!-- ForeCast City -->
+    <widget name="lab23" position="750,12" halign="left" size="510,32" zPosition="1" font="weather;28" foregroundColor="une5b243" backgroundColor="black" transparent="1" valign="top" />
+    <!-- Latitude -->
+    <widget position="100,685" size="210,25" name="Key_Red" font="Regular;20" halign="left" backgroundColor="black" zPosition="3" transparent="1" />
+    <widget position="335,685" size="210,25" name="Key_Green" font="Regular;20" halign="left" backgroundColor="black" zPosition="3" transparent="1" />
+    <ePixmap position="81,685" size="13,25" pixmap="Octagon-HD-Style-Black/YahooWeather/red.png" alphatest="blend" transparent="1" />
+    <ePixmap position="315,685" size="13,25" pixmap="Octagon-HD-Style-Black/YahooWeather/green.png" alphatest="blend" transparent="1" />
+    <eLabel text="Für" position="680,12" size="50,32" zPosition="1" font="weather;28" foregroundColor="une5b243" backgroundColor="black" transparent="1" valign="top" halign="center" />
+    <eLabel position="1038,1" size="235,40" backgroundColor="black" />
   </screen>
 </skin>
