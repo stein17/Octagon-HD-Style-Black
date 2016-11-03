@@ -97,9 +97,15 @@
     <color name="un303030" value="#00303030" />
     <color name="un3B98C9" value="#003b98c9" />
     <color name="un404040" value="#00404040" />
+    <color name="un41000000" value="#41000000" />
+    <color name="un41ff0000" value="#41ff0000" />
     <color name="un444444" value="#00444444" />
     <color name="un5b00" value="#00005b00" />
     <color name="un606060" value="#00606060" />
+    <color name="un6224f" value="#0006224f" />
+    <color name="un669900" value="#00669900" />
+    <color name="un697178" value="#00697178" />
+    <color name="un697279" value="#00697279" />
     <color name="un7300" value="#00007300" />
     <color name="un777777" value="#00777777" />
     <color name="un800000" value="#00800000" />
@@ -114,6 +120,7 @@
     <color name="unc6e0f3" value="#00c6e0f3" />
     <color name="unc8eaff" value="#00c8eaff" />
     <color name="und3d3d3" value="#00d3d3d3" />
+    <color name="und9d9d9" value="#00d9d9d9" />
     <color name="undcaaaa" value="#00dcaaaa" />
     <color name="undcdcdc" value="#00dcdcdc" />
     <color name="undddddd" value="#00dddddd" />
@@ -8910,4 +8917,431 @@ oder alle = Liste
     <widget source="key_blue" render="Label" position="614,685" size="160,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
   </screen>
+  <screen name="movieBrowserMetrix" position="center,center" size="1280,720" flags="wfNoBorder" title=" ">
+    <widget name="backdrop" position="0,0" size="1280,720" alphatest="on" transparent="0" zPosition="-2" />
+    <widget name="metrixback" position="40,25" size="620,670" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="metrixback2" position="660,40" size="570,640" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="audiotype" position="675,55" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolby.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolbyplus.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dts.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dtshd.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mp2.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videomode" position="765,55" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/1080.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/720.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/480.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videocodec" position="825,55" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/h264.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mpeg2.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/divx.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/flv.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dvd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="aspectratio" position="915,55" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/16_9.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/4_3.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd" position="675,55" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd2" position="915,55" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="22" />
+    <widget render="Label" source="global.CurrentTime" position="1088,50" size="140,60" font="Regular;50" foregroundColor="metrixsimpleAccent1" halign="left" transparent="1" zPosition="3">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget render="Label" source="global.CurrentTime" position="916,54" size="161,27" font="Regular;15" foregroundColor="grey" halign="right" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget render="Label" source="global.CurrentTime" position="916,81" size="161,29" font="Regular;16" foregroundColor="grey" halign="right" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%e. %B</convert>
+    </widget>
+    <widget name="menu" position="579,655" size="81,40" alphatest="blend" transparent="1" zPosition="3" />
+    <widget name="info" position="1149,640" size="81,40" alphatest="blend" transparent="1" zPosition="3" />
+    <widget name="help" position="50,655" size="30,29" alphatest="blend" transparent="1" zPosition="3" />
+    <widget name="pvr" position="240,655" size="30,29" alphatest="blend" transparent="1" zPosition="3" />
+    <widget name="text" position="430,655" size="30,29" alphatest="blend" transparent="1" zPosition="3" />
+    <widget name="yellow" pixmap="Octagon-HD-Style-Black/skin_default/buttons/yellow.png" position="50,660" size="3,6" alphatest="blend" transparent="1" zPosition="2" />
+    <widget name="red" position="245,660" size="3,6" alphatest="blend" transparent="1" zPosition="1" />
+    <widget name="green" position="435,660" size="3,6" alphatest="blend" transparent="1" zPosition="1" />
+    <widget name="text1" position="85,654" size="150,30" font="Regular;22" transparent="1" zPosition="3" />
+    <widget name="text2" position="275,654" size="150,30" font="Regular;22" transparent="1" zPosition="3" />
+    <widget name="text3" position="465,654" size="150,30" font="Regular;22" transparent="1" zPosition="3" />
+    <widget name="label" position="80,47" size="540,43" font="Regular;35" foregroundColor="metrixsimpleAccent1" valign="center" transparent="1" zPosition="3" />
+    <widget name="label2" position="80,90" size="540,30" font="Regular;22" foregroundColor="grey" valign="center" transparent="1" zPosition="3" />
+    <widget name="label3" position="80,620" size="320,30" font="Regular;22" foregroundColor="grey" valign="center" transparent="1" zPosition="3" />
+    <widget name="list" position="80,125" size="540,490" transparent="1" zPosition="3" />
+    <widget name="plotname" position="70,55" size="560,30" font="Regular;24" foregroundColor="metrixsimpleAccent1" valign="center" transparent="1" zPosition="20" />
+    <widget name="plotfull" position="70,95" size="590,545" font="Regular;24" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="20" />
+    <widget name="poster" position="722,210" size="150,225" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="posterback" position="675,200" size="245,245" zPosition="20" transparent="1" alphatest="blend" />
+    <widget name="name" position="675,120" size="500,70" font="Regular;28" foregroundColor="metrixsimpleAccent1" valign="center" transparent="1" zPosition="3" />
+    <widget name="seen" position="1175,120" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/seen.png" transparent="1" alphatest="on" zPosition="3" />
+    <widget name="ratings" position="950,210" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings.png" borderWidth="0" halign="center" transparent="1" zPosition="5" />
+    <widget name="ratingsback" position="950,210" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings_back.png" alphatest="on" zPosition="6" />
+    <widget name="Director" position="950,250" size="125,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="8" />
+    <widget name="director" position="950,280" size="255,30" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="9" />
+    <widget name="Year" position="950,320" size="100,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="14" />
+    <widget name="year" position="950,350" size="100,30" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="15" />
+    <widget name="Country" position="1050,320" size="125,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="10" />
+    <widget name="country" position="1050,350" size="125,30" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="11" />
+    <widget name="Runtime" position="950,390" size="125,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="16" />
+    <widget name="runtime" position="950,420" size="125,30" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="17" />
+    <widget name="Genres" position="675,460" size="125,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="18" />
+    <widget name="genres" position="675,490" size="540,30" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="19" />
+    <widget name="Actors" position="675,530" size="125,30" font="Regular;22" foregroundColor="grey" transparent="1" zPosition="12" />
+    <widget name="actors" position="675,560" size="540,64" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="13" />
+    <widget name="eposter" position="675,166" size="540,405" alphatest="on" transparent="1" zPosition="21" />
+    <widget name="banner" position="675,123" size="540,99" alphatest="on" transparent="1" zPosition="21" />
+    <widget name="episodes" position="675,233" size="540,400" scrollbarMode="showOnDemand" transparent="1" zPosition="21" />
+    <widget name="seasons" position="675,233" size="540,400" scrollbarMode="showOnDemand" transparent="1" zPosition="20" />
+    <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/YahooWeather/bg.png" alphatest="blend" transparent="1" zPosition="-1" />
+    <eLabel name="black label" position="0,665" size="1280,5" zPosition="0" />
+    <ePixmap position="50,656" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/yellow.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="240,655" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="430,655" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/green.png" alphatest="blend" zPosition="2" />
+  </screen>
+  <screen name="movieBrowserBackdrop" position="center,center" size="1280,720" flags="wfNoBorder" title=" ">
+    <widget name="backdrop" position="0,0" size="1280,720" alphatest="on" transparent="0" zPosition="-2" />
+    <widget name="infoback" position="25,25" size="525,430" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="plotfullback" position="730,25" size="525,430" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="audiotype" position="970,20" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolby.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolbyplus.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dts.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dtshd.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mp2.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videomode" position="1060,20" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/1080.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/720.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/480.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videocodec" position="1120,20" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/h264.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mpeg2.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/divx.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/flv.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dvd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="aspectratio" position="1210,20" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/16_9.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/4_3.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd" position="1210,20" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd2" position="910,20" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="name" position="40,30" size="455,70" font="Regular;28" foregroundColor="metrixsimpleAccent1" valign="center" transparent="1" zPosition="3" />
+    <widget name="seen" position="495,30" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/seen.png" transparent="1" alphatest="on" zPosition="3" />
+    <widget name="Rating" position="40,100" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="4" />
+    <widget name="ratings" position="40,130" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings.png" borderWidth="0" halign="center" transparent="1" zPosition="5" />
+    <widget name="ratingsback" position="40,130" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings_back.png" alphatest="on" zPosition="6" />
+    <widget name="Director" position="40,170" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="8" />
+    <widget name="director" position="40,200" size="320,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="9" />
+    <widget name="Country" position="370,170" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="10" />
+    <widget name="country" position="370,200" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="11" />
+    <widget name="Actors" position="40,240" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="12" />
+    <widget name="actors" position="40,270" size="320,102" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="13" />
+    <widget name="Year" position="370,240" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="14" />
+    <widget name="year" position="370,270" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="15" />
+    <widget name="Runtime" position="370,310" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="16" />
+    <widget name="runtime" position="370,340" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="17" />
+    <widget name="Genres" position="40,380" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="18" />
+    <widget name="genres" position="40,410" size="500,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="19" />
+    <widget name="plotfull" position="745,40" size="500,393" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="20" />
+    <widget name="eposter" position="742,53" size="500,375" alphatest="on" transparent="1" zPosition="21" />
+    <widget name="banner" position="742,53" size="500,92" alphatest="on" transparent="1" zPosition="21" />
+    <widget name="episodes" position="742,151" size="500,270" scrollbarMode="showOnDemand" transparent="1" zPosition="21" />
+    <widget name="poster0" position="-65,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back0" position="0,535" size="35,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster1" position="40,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back1" position="40,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster2" position="145,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back2" position="145,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster3" position="250,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back3" position="250,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster4" position="355,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back4" position="355,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster5" position="460,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back5" position="460,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster6" position="565,455" size="150,225" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster7" position="720,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back7" position="720,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster8" position="825,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back8" position="825,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster9" position="930,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back9" position="930,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster10" position="1035,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back10" position="1035,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster11" position="1140,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back11" position="1140,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+    <widget name="poster12" position="1245,535" size="100,150" zPosition="21" transparent="1" alphatest="on" />
+    <widget name="poster_back12" position="1245,535" size="100,150" zPosition="22" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/poster_backHD.png" />
+  </screen>
+  <screen name="movieBrowserPosterwall" position="center,center" size="1280,720" flags="wfNoBorder" title=" ">
+    <widget name="backdrop" position="0,0" size="1280,720" alphatest="on" transparent="0" zPosition="-5" />
+    <widget name="infoback" position="5,620" size="1270,95" alphatest="blend" transparent="1" zPosition="2" />
+    <widget name="ratings_up" position="65,641" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings.png" borderWidth="0" halign="center" transparent="1" zPosition="3" />
+    <widget name="ratingsback_up" position="65,641" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings_back.png" alphatest="on" zPosition="4" />
+    <widget name="audiotype" position="25,672" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolby.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dolbyplus.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dts.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dtshd.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mp2.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videomode" position="115,672" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/1080.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/720.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/480.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="videocodec" position="175,672" size="80,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/h264.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/mpeg2.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/divx.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/flv.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/dvd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="aspectratio" position="265,672" size="50,38" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/16_9.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/4_3.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd" position="25,672" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ddd2" position="325,672" size="50,38" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ddd.png" transparent="1" alphatest="blend" zPosition="21" />
+    <widget name="ratings" position="65,657" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings.png" borderWidth="0" halign="center" transparent="1" zPosition="3" />
+    <widget name="ratingsback" position="65,657" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings_back.png" alphatest="on" zPosition="4" />
+    <widget name="name" position="335,620" size="610,95" font="Regular;28" foregroundColor="metrixsimpleAccent1" valign="center" halign="center" transparent="1" zPosition="5" />
+    <widget name="seen" position="950,643" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/seen.png" transparent="1" alphatest="on" zPosition="6" />
+    <widget name="runtime" position="1000,620" size="120,95" font="Regular;26" foregroundColor="metrixsimpleAccent1" halign="right" valign="center" transparent="1" zPosition="7" />
+    <widget name="country" position="1125,620" size="60,95" font="Regular;26" foregroundColor="metrixsimpleAccent1" halign="right" valign="center" transparent="1" zPosition="8" />
+    <widget name="year" position="1190,620" size="65,95" font="Regular;26" foregroundColor="metrixsimpleAccent1" halign="right" valign="center" transparent="1" zPosition="9" />
+    <widget name="2infoback" position="25,75" size="525,430" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="2name" position="40,80" size="455,70" font="Regular;28" foregroundColor="metrixsimpleAccent1" valign="center" transparent="1" zPosition="13" />
+    <widget name="2seen" position="495,80" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/seen.png" transparent="1" alphatest="on" zPosition="13" />
+    <widget name="2Rating" position="40,150" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="14" />
+    <widget name="2ratings" position="40,180" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings.png" borderWidth="0" halign="center" transparent="1" zPosition="15" />
+    <widget name="2ratingsback" position="40,180" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/ratings_back.png" alphatest="on" zPosition="16" />
+    <widget name="2Director" position="40,220" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="18" />
+    <widget name="2director" position="40,250" size="320,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="19" />
+    <widget name="2Country" position="370,220" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="20" />
+    <widget name="2country" position="370,250" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="21" />
+    <widget name="2Actors" position="40,290" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="22" />
+    <widget name="2actors" position="40,320" size="320,102" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="23" />
+    <widget name="2Year" position="370,290" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="24" />
+    <widget name="2year" position="370,320" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="25" />
+    <widget name="2Runtime" position="370,360" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="26" />
+    <widget name="2runtime" position="370,390" size="125,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="27" />
+    <widget name="2Genres" position="40,430" size="125,28" font="Regular;22" halign="left" foregroundColor="white" transparent="1" zPosition="28" />
+    <widget name="2genres" position="40,460" size="500,28" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="29" />
+    <widget name="plotfullback" position="730,75" size="525,430" alphatest="blend" transparent="1" zPosition="-1" />
+    <widget name="plotfull" position="745,90" size="500,393" font="Regular;22" foregroundColor="metrixsimpleAccent1" transparent="1" zPosition="30" />
+    <widget name="eposter" position="742,103" size="500,375" alphatest="on" transparent="1" zPosition="30" />
+    <widget name="banner" position="742,103" size="500,92" alphatest="on" transparent="1" zPosition="30" />
+    <widget name="episodes" position="742,201" size="500,270" scrollbarMode="showOnDemand" transparent="1" zPosition="30" />
+    <widget name="frame" position="7,41" size="160,230" zPosition="-2" alphatest="on" />
+    <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/YahooWeather/bg.png" alphatest="blend" transparent="1" zPosition="-1" />
+    <eLabel name="black label" position="0,665" size="1280,5" zPosition="0" />
+  </screen>
+  <screen name="movieControlList" position="center,center" size="730,545" title=" ">
+    <ePixmap position="0,0" size="730,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logoList.png" zPosition="1" />
+    <ePixmap position="10,1" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="10,27" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/green.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="702,27" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/yellow.png" alphatest="blend" zPosition="2" />
+    <widget name="label" position="34,5" size="120,20" font="Regular;16" foregroundColor="black" backgroundColor="metrixsimpleAccent1" halign="left" transparent="1" zPosition="2" />
+    <widget name="label2" position="35,30" size="120,20" font="Regular;16" foregroundColor="black" backgroundColor="metrixsimpleAccent1" halign="left" transparent="1" zPosition="2" />
+    <widget name="label3" position="572,30" size="120,20" font="Regular;16" foregroundColor="black" backgroundColor="metrixsimpleAccent1" halign="right" transparent="1" zPosition="2" />
+    <widget name="list" position="10,60" size="710,475" scrollbarMode="showOnDemand" zPosition="1" />
+    <widget name="log" position="10,60" size="710,475" font="Regular;20" zPosition="1" />
+  </screen>
+  <screen name="movieDatabase" position="center,center" size="730,325" title=" ">
+    <ePixmap position="0,0" size="730,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logo.png" zPosition="1" />
+    <widget name="list" position="10,38" size="710,275" scrollbarMode="showOnDemand" zPosition="1" />
+    <widget name="list2" position="10,38" size="710,275" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="moviesList" position="center,center" size="730,538" title=" ">
+    <ePixmap position="0,0" size="730,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logo.png" zPosition="1" />
+    <widget name="poster1" position="10,33" size="80,120" alphatest="blend" zPosition="1" />
+    <widget name="poster2" position="10,158" size="80,120" alphatest="blend" zPosition="1" />
+    <widget name="poster3" position="10,283" size="80,120" alphatest="blend" zPosition="1" />
+    <widget name="poster4" position="10,408" size="80,120" alphatest="blend" zPosition="1" />
+    <widget name="list" position="100,33" size="620,500" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="filterList" position="center,center" size="730,538" title=" ">
+    <ePixmap position="95,232" size="512,288" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/{png}.png" zPosition="1" />
+    <widget name="list" position="19,7" size="700,520" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="filterSeasonList" position="center,center" size="530,523" title=" ">
+    <ePixmap position="0,0" size="530,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logoConfig.png" zPosition="1" />
+    <widget name="list" position="10,38" size="510,475" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="getABC" position="center,center" size="190,60" backgroundColor="black" flags="wfNoBorder" title=" ">
+    <widget name="ABC" position="0,0" size="190,60" font="Regular;34" halign="center" valign="center" transparent="1" zPosition="1" />
+  </screen>
+  <screen name="switchScreen" position="center,center" size="300,300" flags="wfNoBorder" title=" ">
+    <widget name="label_1" position="0,0" size="300,100" font="Regular;32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_2" position="0,100" size="300,100" font="Regular;32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_3" position="0,200" size="300,100" font="Regular;32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_1" position="0,0" size="300,100" font="Regular;32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_2" position="0,100" size="300,100" font="Regular;32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_3" position="0,200" size="300,100" font="Regular;32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="select_1" position="0,0" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+    <widget name="select_2" position="0,100" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+    <widget name="select_3" position="0,200" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+  </screen>
+  <screen name="switchStart" position="center,center" size="300,300" flags="wfNoBorder" title=" ">
+    <widget name="label_1" position="0,0" size="300,100" font="{font};32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_2" position="0,100" size="300,100" font="{font};32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_3" position="0,200" size="300,100" font="{font};32" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_1" position="0,0" size="300,100" font="{font};32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_2" position="0,100" size="300,100" font="{font};32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="label_select_3" position="0,200" size="300,100" font="{font};32" backgroundColor="und9d9d9" foregroundColor="black" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="select_1" position="0,0" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+    <widget name="select_2" position="0,100" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+    <widget name="select_3" position="0,200" size="300,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/browser/menu_select.png" transparent="1" alphatest="blend" zPosition="-1" />
+  </screen>
+  <screen name="searchWikipedia" position="center,center" size="550,295" title=" ">
+    <ePixmap position="0,0" size="550,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Wikipedia/pic/wiki.png" zPosition="1" />
+    <widget name="list" position="10,60" size="530,225" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="searchYouTube" position="center,center" size="1000,560" title=" ">
+    <ePixmap position="0,0" size="1000,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/youtube.png" zPosition="1" />
+    <ePixmap position="10,0" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/blue.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="10,26" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/yellow.png" alphatest="blend" zPosition="2" />
+    <widget name="label" position="36,4" size="200,20" font="Regular;16" foregroundColor="un697178" backgroundColor="metrixsimpleAccent1" halign="left" transparent="1" zPosition="2" />
+    <widget name="label2" position="36,29" size="200,20" font="Regular;16" foregroundColor="un697178" backgroundColor="metrixsimpleAccent1" halign="left" transparent="1" zPosition="2" />
+    <widget render="Label" source="global.CurrentTime" position="740,0" size="240,50" font="Regular;24" foregroundColor="un697279" backgroundColor="metrixsimpleAccent1" halign="right" valign="center" zPosition="2">
+      <convert type="ClockToText">Format:%H:%M:%S</convert>
+    </widget>
+    <widget name="poster1" position="10,55" size="215,120" alphatest="blend" zPosition="1" />
+    <widget name="poster2" position="10,180" size="215,120" alphatest="blend" zPosition="1" />
+    <widget name="poster3" position="10,305" size="215,120" alphatest="blend" zPosition="1" />
+    <widget name="poster4" position="10,430" size="215,120" alphatest="blend" zPosition="1" />
+    <widget name="list" position="235,55" size="755,500" scrollbarMode="showOnDemand" zPosition="1" />
+  </screen>
+  <screen name="helpScreen" position="center,center" size="512,512" flags="wfNoBorder" title="MovieBrowser">
+    <ePixmap position="0,0" size="515,512" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/help.png" alphatest="on" transparent="0" zPosition="0" />
+    <ePixmap position="121,50" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/yellow.png" alphatest="blend" zPosition="3" />
+    <ePixmap position="121,75" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/green.png" alphatest="blend" zPosition="3" />
+    <ePixmap position="121,100" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" alphatest="blend" zPosition="3" />
+    <ePixmap position="121,125" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/blue.png" alphatest="blend" zPosition="3" />
+    <widget name="label" position="120,48" size="415,420" font="Regular;18" transparent="1" zPosition="2" />
+  </screen>
+  <screen name="infoScreenMovieBrowser" position="center,center" size="425,425" title=" ">
+    <ePixmap position="0,0" size="425,425" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/info.png" zPosition="1" />
+    <widget name="label" position="0,72" size="425,350" font="Regular;18" foregroundColor="black" backgroundColor="metrixsimpleAccent1" halign="center" valign="center" transparent="1" zPosition="2" />
+  </screen>
+  <screen name="DownloadUpdate" position="center,center" size="550,168" title="Download Update...">
+    <ePixmap position="10,10" size="530,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logoConfig.png" alphatest="blend" zPosition="1" />
+    <widget name="name" position="10,48" size="530,50" font="Regular;20" halign="center" valign="center" transparent="1" zPosition="1" />
+    <widget name="size" position="10,98" size="530,25" font="Regular;20" halign="center" transparent="1" zPosition="1" />
+    <widget name="slider" position="10,128" size="530,30" transparent="0" zPosition="2" />
+  </screen>
+  <screen name="movieBrowserConfig" position="center,center" size="530,525" backgroundColor="background20" title=" ">
+    <ePixmap position="0,0" size="530,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logoConfig.png" alphatest="blend" zPosition="1" />
+    <ePixmap position="9,37" size="512,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/seperator.png" alphatest="off" zPosition="1" />
+    <widget name="config" position="9,38" size="512,150" itemHeight="25" scrollbarMode="showOnDemand" zPosition="1" />
+    <ePixmap position="9,189" size="512,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/seperator.png" alphatest="off" zPosition="1" />
+    <widget name="save" position="150,200" size="125,20" font="Regular;18" halign="left" transparent="1" zPosition="1" />
+    <widget name="cancel" position="365,200" size="125,20" font="Regular;18" halign="left" transparent="1" zPosition="1" />
+    <ePixmap position="125,199" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/green.png" alphatest="blend" zPosition="1" />
+    <ePixmap position="340,199" size="18,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/red.png" alphatest="blend" zPosition="1" />
+    <widget name="plugin" position="9,228" size="512,288" alphatest="blend" zPosition="1" />
+  </screen>
+  <screen name="FolderSelection" position="center,center" size="530,525" backgroundColor="background20" title=" ">
+    <ePixmap position="0,0" size="530,28" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/logoConfig.png" alphatest="blend" zPosition="1" />
+    <ePixmap position="9,37" size="512,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/seperator.png" alphatest="off" zPosition="1" />
+    <widget name="folderlist" position="9,38" size="512,150" itemHeight="25" scrollbarMode="showOnDemand" zPosition="1" />
+    <ePixmap position="9,189" size="512,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/setup/seperator.png" alphatest="off" zPosition="1" />
+    <widget name="save" position="150,198" size="125,20" font="{font};18" halign="left" transparent="1" zPosition="1" />
+    <widget name="cancel" position="365,198" size="125,20" font="{font};18" halign="left" transparent="1" zPosition="1" />
+    <ePixmap position="125,199" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/buttons/green.png" alphatest="blend" zPosition="1" />
+    <ePixmap position="340,199" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MovieBrowser/pic/buttons/red.png" alphatest="blend" zPosition="1" />
+    <widget name="plugin" position="9,228" size="512,288" alphatest="blend" zPosition="1" />
+  </screen>
+  <!--  Skin: nStreamPlayer HD -->
+
+
+
+<screen name="nPlaylist" position="0,0" size="1280,720" backgroundColor="#41000000" flags="wfNoBorder" title="Playlist"> 
+	
+    <ePixmap position="63,680" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" zPosition="3" transparent="1" alphatest="blend" />  
+	
+	<eLabel position="83,680" zPosition="4" size="170,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="#41000000" text="ANAMENU" />
+	<widget backgroundColor="background" foregroundColor="unf0b400" position="744,418" size="420,236" name="description" font="Regular;22" />
+	<widget backgroundColor="#41000000" foregroundColor="white" position="8,0" size="850,40" name="playlist" zPosition="1" font="Regular;32" />
+    <widget name="time" position="895,-2" size="124,44" font="Regular;48" foregroundColor="white" backgroundColor="black " zPosition="0" />
+	<widget name="poster" position="761,81" size="290,300" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
+    <widget name="info" font="Regular;22" backgroundColor="background" foregroundColor="white" position="1085,79" size="164,340" /> 
+	<widget name="feedlist" position="8,54" size="720,600" foregroundColorSelected="white" backgroundColor="#41000000" foregroundColor="white" backgroundColorSelected="#un303030" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" transparent="0" /> 
+	<widget name="version" position="874,680" zPosition="4" size="400,24" halign="left" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="#41000000" text=" " />
+    
+	
+			
+	<widget name="pixmap2a" position="257,680" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/chminus.png" zPosition="3" transparent="1" alphatest="blend" />
+	<widget name="pixmap3a" position="470,679" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/chplus.png" zPosition="3" transparent="1" alphatest="blend" />
+	<widget name="pixmap4a" position="673,680" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/stop.png" zPosition="3" transparent="1" alphatest="blend" />
+	<widget name="chminus" position="285,680" zPosition="4" size="180,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
+	<widget name="chplus" position="496,680" zPosition="4" size="180,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
+	<widget name="stop" position="700,680" zPosition="4" size="170,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />		   
+
+<ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" transparent="1" zPosition="-1" />
+</screen>
+
+<screen name="nIPTVplayer" position="0,590" size="1280,130" backgroundColor="#41000000" flags="wfNoBorder" title="IPTVplayer">
+    <ePixmap position="11,4" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" />
+	<widget position="15,8" halign="center" size="64,28" foregroundColor="white" zPosition="2" name="channel_number" transparent="1" font="Regular;34" />
+	<widget position="94,5" size="650,34" foregroundColor="white" backgroundColor="#41000000" name="channel_name" font="Regular;34" />
+	<widget position="746,8" size="280,26" halign="right" foregroundColor="white" backgroundColor="#41000000" name="group" font="Regular;26" />
+	<widget name="picon" position="120,68" size="35,35" backgroundColor="#41000000" />
+	<ePixmap position="80,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/pristavka.png" zPosition="10" transparent="1" alphatest="blend" />   	 
+	<widget position="300,56" size="650,25" foregroundColor="white" backgroundColor="#41000000" name="programm" font="Regular;24" zPosition="1" />
+
+	<ePixmap position="1200,71" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" /> 
+	<widget position="1203,76" size="66,26" foregroundColor="white" halign="center" zPosition="2" name="time_now" transparent="1" font="Regular;28" />
+	<ePixmap position="1070,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/network.png" zPosition="1" transparent="1" alphatest="blend" /> 
+    <widget source="session.CurrentService" render="Label" zPosition="4" position="555,96" size="75,22" halign="right" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
+      <convert type="ServiceInfo">VideoWidth</convert>
+    </widget>
+    <eLabel text="x" zPosition="4" position="630,96" size="15,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" zPosition="4" position="646,96" size="75,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
+      <convert type="ServiceInfo">VideoHeight</convert>
+    </widget>
+	<ePixmap pixmap="Octagon-HD-Style-Black/menu/Oktagon_EPG.png" position="0,0" size="1280,130" zPosition="-10" />
+</screen>
+
+<screen name="nVODplayer" position="0,0" size="1280,720" flags="wfNoBorder" title="Videoplayer" backgroundColor="transparent">
+	
+	
+	<widget name="cover" position="7,494" size="154,220" zPosition="1" transparent="1" alphatest="blend" />
+	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="409,657" size="90,20" font="Regular;18" halign="center" valign="center" backgroundColor="#06224f" transparent="1">
+		<convert type="ServicePosition">Position</convert>
+	</widget>
+	<ePixmap pixmap="Octagon-HD-Style-Black/menu/EMCPointer.png" position="497,658" size="435,18" zPosition="1" />
+	<widget source="session.CurrentService" render="PositionGauge" backgroundColor="#00ffff" position="497,662" size="432,10" zPosition="2" pointer="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/slider_584x10_hbg.png:600,-8" transparent="1">
+		<convert type="ServicePosition">Gauge</convert>
+	</widget>
+	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="173,604" size="900,40" font="Regular;30" backgroundColor="#41000000" transparent="1" halign="center">
+		<convert type="ServiceName">Name</convert>
+	</widget>
+	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="1126,603" size="120,40" font="Regular;30" halign="center" backgroundColor="background" transparent="1">
+		<convert type="ServicePosition">Length</convert>
+	</widget>
+	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="932,656" size="90,20" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="#41000000" transparent="1">
+		<convert type="ServicePosition">Remaining</convert>
+	</widget>
+	<!-- <ePixmap position="1160,40" size="75,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/kino.png"    zPosition="3" transparent="1" alphatest="blend" /> -->
+
+	<!-- HELP GRAPHS -->
+	
+	<ePixmap position="510,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/play.png" zPosition="3" transparent="1" alphatest="blend" />
+	<ePixmap position="660,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/pause.png" zPosition="3" transparent="1" alphatest="blend" />		
+	<eLabel position="693,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Pause" /> 		
+
+	
+	<ePixmap position="812,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/stop.png" zPosition="3" transparent="1" alphatest="blend" /> 
+	 		
+
+	
+	
+	<eLabel position="206,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-10s" /> 		
+
+	
+	<eLabel position="284,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-1m" /> 		
+
+	
+	<eLabel position="363,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-5m" /> 		
+
+			
+	
+	<eLabel position="1067,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+10s" /> 		
+
+	
+	<eLabel position="1144,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+1m" /> 		
+
+	
+	<eLabel position="1223,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+5m" />
+	
+    <widget source="session.CurrentService" render="Label" zPosition="4" position="209,657" size="75,22" halign="right" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
+      <convert type="ServiceInfo">VideoWidth</convert>
+    </widget>
+    <eLabel text="x" zPosition="4" position="284,657" size="15,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background" />
+    <widget source="session.CurrentService" render="Label" zPosition="4" position="299,657" size="75,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
+      <convert type="ServiceInfo">VideoHeight</convert>
+    </widget>
+ <ePixmap position="0,-1" size="1283,720" zPosition="-2" pixmap="Octagon-HD-Style-Black/menu/EMC_Player.png" />
+	 		
+	<eLabel name="abdecken" position="1079,648" size="130,33" zPosition="-1" backgroundColor="black" />
+<eLabel name="abdecken" position="410,605" size="5,35" zPosition="-1" backgroundColor="black" />
+<eLabel name="abdecken" position="1018,605" size="5,35" zPosition="-1" backgroundColor="black" />
+<ePixmap position="175,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_1.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="253,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_4.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="332,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_7.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="1036,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_3.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="1112,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_6.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="1191,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_9.png" zPosition="3" transparent="1" alphatest="blend" />
+<eLabel position="540,691" zPosition="4" size="90,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Play" /><eLabel position="844,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Stop" /></screen> 
+
+	<screen name="SelectQuality" position="center,center" size="300,200" backgroundColor="#41000000" flags="wfNoBorder" title="Episode selector">
+		<widget name="menulabel" position="40,30" zPosition="1" size="232,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="#41000000" /> 
+		<widget name="filmparts" itemHeight="30" position="41,80" size="300,200" backgroundColor="#41000000" foregroundColor="white" /> 
+	</screen>	
+	
+	<screen name="nStreamTasksScreen" position="center,center" size="1180,550" title="Video Download List">
+		<widget source="movielist" render="Listbox" position="10,50" size="1180,450" zPosition="7" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 1), size = (710, 28), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (720, 1), size = (150, 28), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+						MultiContentEntryProgress(pos = (880, 1), size = (100, 28), percent = -3), # index 3 should be progress
+						MultiContentEntryText(pos = (990, 1), size = (60, 28), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 26),gFont("Regular", 22)],
+				"itemHeight": 29
+				}
+			</convert>
+		</widget>
+	</screen>	
+	       
+
 </skin>
