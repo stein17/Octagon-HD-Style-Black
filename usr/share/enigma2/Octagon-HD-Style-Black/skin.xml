@@ -1828,9 +1828,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <ePixmap pixmap="Octagon-HD-Style-Black/menu/Playerbar.png" position="0,0" zPosition="-1" size="1280,720" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/movie.png" position="31,595" zPosition="1" size="206,103" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1054,635" size="170,48" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" valign="top">
+    <widget source="global.CurrentTime" render="Label" position="1013,637" size="170,48" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" valign="top">
       <convert type="ClockToText">Default</convert>
     </widget>
+    <widget source="session.CurrentService" render="Cover" position="1149,544" size="120,145" zPosition="4" transparent="1" alphatest="blend" />
   </screen>
   <screen name="MovieSelection" position="0,0" size="1280,720" title="Select a movie" flags="wfNoBorder" backgroundColor="black">
     <eLabel text="Select a movie" position="10,0" size="273,70" font="Regular; 32" backgroundColor="black" transparent="1" valign="top" />
@@ -8148,17 +8149,17 @@ oder alle = Liste
   </screen>
   <screen name="MediaPlayer" position="0,0" size="1280,720" title="MediaPlayer" flags="wfNoBorder" backgroundColor="black">
     <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_epgselection.png" alphatest="blend" />
-    <eLabel position="445,308" size="500,40" text="Playlist" font="Regular; 22" backgroundColor="black" foregroundColor="white" transparent="1" />
+    <eLabel position="448,390" size="500,40" text="Playlist" font="Regular; 22" backgroundColor="black" foregroundColor="white" transparent="1" />
     <eLabel name="new eLabel" position="70,510" size="300,1" backgroundColor="black" foregroundColor="white" zPosition="-1" />
-    <widget name="filelist" position="446,70" size="810,240" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" foregroundColorSelected="white" transparent="1" />
-    <widget name="coverArt" position="93,268" size="256,156" pixmap="Octagon-HD-Style-Black/skin_default/icons/no_coverArt.png" transparent="1" alphatest="blend" />
+    <widget name="filelist" position="440,59" size="600,240" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" foregroundColorSelected="white" transparent="1" />
+    <widget name="coverArt" position="1012,172" size="250,250" pixmap="Octagon-HD-Style-Black/skin_default/icons/no_coverArt.png" transparent="1" alphatest="blend" />
     <widget name="artist" position="58,471" size="329,30" font="Regular;22" valign="top" backgroundColor="black" foregroundColor="white" transparent="1" />
     <widget name="albumtext" position="57,550" size="120,30" font="Regular;22" valign="top" foregroundColor="white" backgroundColor="black" transparent="1" halign="left" />
     <widget name="album" position="58,585" size="320,30" font="Regular;22" valign="top" backgroundColor="black" foregroundColor="white" transparent="1" />
     <widget name="year" position="132,550" size="250,30" font="Regular;22" valign="top" backgroundColor="black" foregroundColor="white" transparent="1" halign="right" />
     <widget name="genre" position="58,620" size="320,30" font="Regular;22" valign="top" backgroundColor="black" foregroundColor="white" transparent="1" />
     <widget name="title" position="58,428" size="325,40" font="Regular; 26" halign="left" backgroundColor="black" foregroundColor="white" transparent="1" />
-    <widget name="playlist" position="445,352" size="810,300" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" foregroundColorSelected="white" transparent="1" />
+    <widget name="playlist" position="449,432" size="810,230" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" foregroundColorSelected="white" transparent="1" />
     <widget name="repeat" pixmaps="Octagon-HD-Style-Black/repeat_off.png,Octagon-HD-Style-Black/repeat_on.png" position="1028,681" size="70,30" transparent="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Label" position="58,515" size="119,32" zPosition="2" font="Regular; 22" halign="left" backgroundColor="black" foregroundColor="white" noWrap="1" transparent="1">
       <convert type="ServicePosition">Position,ShowHours</convert>
@@ -9200,46 +9201,35 @@ oder alle = Liste
     <widget name="plugin" position="9,228" size="512,288" alphatest="blend" zPosition="1" />
   </screen>
   <!--  Skin: nStreamPlayer HD -->
-
-
-
-<screen name="nPlaylist" position="0,0" size="1280,720" backgroundColor="#41000000" flags="wfNoBorder" title="Playlist"> 
-	
-    <ePixmap position="63,680" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" zPosition="3" transparent="1" alphatest="blend" />  
-	
-	<eLabel position="83,680" zPosition="4" size="170,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="#41000000" text="ANAMENU" />
-	<widget backgroundColor="background" foregroundColor="unf0b400" position="744,418" size="420,236" name="description" font="Regular;22" />
-	<widget backgroundColor="#41000000" foregroundColor="white" position="8,0" size="850,40" name="playlist" zPosition="1" font="Regular;32" />
-    <widget name="time" position="895,-2" size="124,44" font="Regular;48" foregroundColor="white" backgroundColor="black " zPosition="0" />
-	<widget name="poster" position="761,81" size="290,300" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
-    <widget name="info" font="Regular;22" backgroundColor="background" foregroundColor="white" position="1085,79" size="164,340" /> 
-	<widget name="feedlist" position="8,54" size="720,600" foregroundColorSelected="white" backgroundColor="#41000000" foregroundColor="white" backgroundColorSelected="#un303030" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" transparent="0" /> 
-	<widget name="version" position="874,680" zPosition="4" size="400,24" halign="left" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="#41000000" text=" " />
-    
-	
-			
-	<widget name="pixmap2a" position="257,680" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/chminus.png" zPosition="3" transparent="1" alphatest="blend" />
-	<widget name="pixmap3a" position="470,679" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/chplus.png" zPosition="3" transparent="1" alphatest="blend" />
-	<widget name="pixmap4a" position="673,680" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/stop.png" zPosition="3" transparent="1" alphatest="blend" />
-	<widget name="chminus" position="285,680" zPosition="4" size="180,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
-	<widget name="chplus" position="496,680" zPosition="4" size="180,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
-	<widget name="stop" position="700,680" zPosition="4" size="170,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />		   
-
-<ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" transparent="1" zPosition="-1" />
+  <screen name="nPlaylist" position="0,0" size="1280,720" backgroundColor="un41000000" flags="wfNoBorder" title="Playlist">
+  <ePixmap position="60,681" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" zPosition="3" transparent="1" alphatest="blend" />
+  <eLabel position="80,679" zPosition="4" size="270,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="un41000000" text="ANAMENU / ZURÜCK" />
+  <widget backgroundColor="background" foregroundColor="unf0b400" position="741,398" size="535,255" name="description" font="Regular;22" />
+  <widget backgroundColor="un41000000" foregroundColor="white" position="8,0" size="850,40" name="playlist" zPosition="1" font="Regular;32" />
+  <widget name="time" position="895,-2" size="124,44" font="Regular;48" foregroundColor="white" backgroundColor="black " zPosition="0" />
+  <widget name="poster" position="743,140" size="220,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
+  <widget name="info" font="Regular;22" backgroundColor="background" foregroundColor="white" position="974,141" size="300,250" />
+  <widget name="feedlist" position="8,54" size="720,600" foregroundColorSelected="white" backgroundColor="un41000000" foregroundColor="white" backgroundColorSelected="#un303030" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" transparent="0" />
+  <widget name="version" position="874,680" zPosition="4" size="400,24" halign="left" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="un41000000" text=" " />
+  <widget name="pixmap4a" position="359,679" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/stop.png" zPosition="3" transparent="1" alphatest="blend" />
+  
+  
+  <widget name="stop" position="435,679" zPosition="4" size="170,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
+  <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" transparent="1" zPosition="-1" />
+<ePixmap position="738,56" size="536,76" pixmap="Octagon-HD-Style-Black/mmp/turkmediacenter.png" zPosition="3" transparent="1" alphatest="blend" />
+<ePixmap position="393,679" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/menu.png" zPosition="4" transparent="1" alphatest="blend" />
 </screen>
-
-<screen name="nIPTVplayer" position="0,590" size="1280,130" backgroundColor="#41000000" flags="wfNoBorder" title="IPTVplayer">
+  <screen name="nIPTVplayer" position="0,590" size="1280,130" backgroundColor="un41000000" flags="wfNoBorder" title="IPTVplayer">
     <ePixmap position="11,4" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" />
-	<widget position="15,8" halign="center" size="64,28" foregroundColor="white" zPosition="2" name="channel_number" transparent="1" font="Regular;34" />
-	<widget position="94,5" size="650,34" foregroundColor="white" backgroundColor="#41000000" name="channel_name" font="Regular;34" />
-	<widget position="746,8" size="280,26" halign="right" foregroundColor="white" backgroundColor="#41000000" name="group" font="Regular;26" />
-	<widget name="picon" position="120,68" size="35,35" backgroundColor="#41000000" />
-	<ePixmap position="80,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/pristavka.png" zPosition="10" transparent="1" alphatest="blend" />   	 
-	<widget position="300,56" size="650,25" foregroundColor="white" backgroundColor="#41000000" name="programm" font="Regular;24" zPosition="1" />
-
-	<ePixmap position="1200,71" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" /> 
-	<widget position="1203,76" size="66,26" foregroundColor="white" halign="center" zPosition="2" name="time_now" transparent="1" font="Regular;28" />
-	<ePixmap position="1070,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/network.png" zPosition="1" transparent="1" alphatest="blend" /> 
+    <widget position="15,8" halign="center" size="64,28" foregroundColor="white" zPosition="2" name="channel_number" transparent="1" font="Regular;34" />
+    <widget position="94,5" size="650,34" foregroundColor="white" backgroundColor="un41000000" name="channel_name" font="Regular;34" />
+    <widget position="746,8" size="280,26" halign="right" foregroundColor="white" backgroundColor="un41000000" name="group" font="Regular;26" />
+    <widget name="picon" position="120,68" size="35,35" backgroundColor="un41000000" />
+    <ePixmap position="80,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/pristavka.png" zPosition="10" transparent="1" alphatest="blend" />
+    <widget position="300,56" size="650,25" foregroundColor="white" backgroundColor="un41000000" name="programm" font="Regular;24" zPosition="1" />
+    <ePixmap position="1200,71" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" />
+    <widget position="1203,76" size="66,26" foregroundColor="white" halign="center" zPosition="2" name="time_now" transparent="1" font="Regular;28" />
+    <ePixmap position="1070,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/network.png" zPosition="1" transparent="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Label" zPosition="4" position="555,96" size="75,22" halign="right" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
       <convert type="ServiceInfo">VideoWidth</convert>
     </widget>
@@ -9247,61 +9237,38 @@ oder alle = Liste
     <widget source="session.CurrentService" render="Label" zPosition="4" position="646,96" size="75,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
-	<ePixmap pixmap="Octagon-HD-Style-Black/menu/Oktagon_EPG.png" position="0,0" size="1280,130" zPosition="-10" />
-</screen>
-
-<screen name="nVODplayer" position="0,0" size="1280,720" flags="wfNoBorder" title="Videoplayer" backgroundColor="transparent">
-	
-	
-	<widget name="cover" position="7,494" size="154,220" zPosition="1" transparent="1" alphatest="blend" />
-	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="409,657" size="90,20" font="Regular;18" halign="center" valign="center" backgroundColor="#06224f" transparent="1">
-		<convert type="ServicePosition">Position</convert>
-	</widget>
-	<ePixmap pixmap="Octagon-HD-Style-Black/menu/EMCPointer.png" position="497,658" size="435,18" zPosition="1" />
-	<widget source="session.CurrentService" render="PositionGauge" backgroundColor="#00ffff" position="497,662" size="432,10" zPosition="2" pointer="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/slider_584x10_hbg.png:600,-8" transparent="1">
-		<convert type="ServicePosition">Gauge</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="173,604" size="900,40" font="Regular;30" backgroundColor="#41000000" transparent="1" halign="center">
-		<convert type="ServiceName">Name</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="1126,603" size="120,40" font="Regular;30" halign="center" backgroundColor="background" transparent="1">
-		<convert type="ServicePosition">Length</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="white" render="Label" position="932,656" size="90,20" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="#41000000" transparent="1">
-		<convert type="ServicePosition">Remaining</convert>
-	</widget>
-	<!-- <ePixmap position="1160,40" size="75,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/kino.png"    zPosition="3" transparent="1" alphatest="blend" /> -->
-
-	<!-- HELP GRAPHS -->
-	
-	<ePixmap position="510,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/play.png" zPosition="3" transparent="1" alphatest="blend" />
-	<ePixmap position="660,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/pause.png" zPosition="3" transparent="1" alphatest="blend" />		
-	<eLabel position="693,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Pause" /> 		
-
-	
-	<ePixmap position="812,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/stop.png" zPosition="3" transparent="1" alphatest="blend" /> 
-	 		
-
-	
-	
-	<eLabel position="206,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-10s" /> 		
-
-	
-	<eLabel position="284,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-1m" /> 		
-
-	
-	<eLabel position="363,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-5m" /> 		
-
-			
-	
-	<eLabel position="1067,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+10s" /> 		
-
-	
-	<eLabel position="1144,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+1m" /> 		
-
-	
-	<eLabel position="1223,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+5m" />
-	
+    <ePixmap pixmap="Octagon-HD-Style-Black/menu/Oktagon_EPG.png" position="0,0" size="1280,130" zPosition="-10" />
+  </screen>
+  <screen name="nVODplayer" position="0,0" size="1280,720" flags="wfNoBorder" title="Videoplayer" backgroundColor="transparent">
+    <widget name="cover" position="7,494" size="154,220" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="session.CurrentService" foregroundColor="white" render="Label" position="409,657" size="90,20" font="Regular;18" halign="center" valign="center" backgroundColor="un6224f" transparent="1">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <ePixmap pixmap="Octagon-HD-Style-Black/menu/EMCPointer.png" position="497,658" size="435,18" zPosition="1" />
+    <widget source="session.CurrentService" render="PositionGauge" backgroundColor="meinhimmelblau" position="497,662" size="432,10" zPosition="2" pointer="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/slider_584x10_hbg.png:600,-8" transparent="1">
+      <convert type="ServicePosition">Gauge</convert>
+    </widget>
+    <widget source="session.CurrentService" foregroundColor="white" render="Label" position="173,604" size="900,40" font="Regular;30" backgroundColor="un41000000" transparent="1" halign="center">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.CurrentService" foregroundColor="white" render="Label" position="1126,603" size="120,40" font="Regular;30" halign="center" backgroundColor="background" transparent="1">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+    <widget source="session.CurrentService" foregroundColor="white" render="Label" position="932,656" size="90,20" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="un41000000" transparent="1">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <!-- <ePixmap position="1160,40" size="75,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/kino.png"    zPosition="3" transparent="1" alphatest="blend" /> -->
+    <!-- HELP GRAPHS -->
+    <ePixmap position="510,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/play.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="660,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/pause.png" zPosition="3" transparent="1" alphatest="blend" />
+    <eLabel position="693,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Pause" />
+    <ePixmap position="812,689" size="32,24" pixmap="Octagon-HD-Style-Black/buttons/stop.png" zPosition="3" transparent="1" alphatest="blend" />
+    <eLabel position="206,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-10s" />
+    <eLabel position="284,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-1m" />
+    <eLabel position="363,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="-5m" />
+    <eLabel position="1067,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+10s" />
+    <eLabel position="1144,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+1m" />
+    <eLabel position="1223,695" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="cyan1" backgroundColor="background" text="+5m" />
     <widget source="session.CurrentService" render="Label" zPosition="4" position="209,657" size="75,22" halign="right" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
       <convert type="ServiceInfo">VideoWidth</convert>
     </widget>
@@ -9309,27 +9276,26 @@ oder alle = Liste
     <widget source="session.CurrentService" render="Label" zPosition="4" position="299,657" size="75,22" halign="left" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="background">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
- <ePixmap position="0,-1" size="1283,720" zPosition="-2" pixmap="Octagon-HD-Style-Black/menu/EMC_Player.png" />
-	 		
-	<eLabel name="abdecken" position="1079,648" size="130,33" zPosition="-1" backgroundColor="black" />
-<eLabel name="abdecken" position="410,605" size="5,35" zPosition="-1" backgroundColor="black" />
-<eLabel name="abdecken" position="1018,605" size="5,35" zPosition="-1" backgroundColor="black" />
-<ePixmap position="175,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_1.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="253,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_4.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="332,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_7.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="1036,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_3.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="1112,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_6.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="1191,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_9.png" zPosition="3" transparent="1" alphatest="blend" />
-<eLabel position="540,691" zPosition="4" size="90,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Play" /><eLabel position="844,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Stop" /></screen> 
-
-	<screen name="SelectQuality" position="center,center" size="300,200" backgroundColor="#41000000" flags="wfNoBorder" title="Episode selector">
-		<widget name="menulabel" position="40,30" zPosition="1" size="232,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="#41000000" /> 
-		<widget name="filmparts" itemHeight="30" position="41,80" size="300,200" backgroundColor="#41000000" foregroundColor="white" /> 
-	</screen>	
-	
-	<screen name="nStreamTasksScreen" position="center,center" size="1180,550" title="Video Download List">
-		<widget source="movielist" render="Listbox" position="10,50" size="1180,450" zPosition="7" scrollbarMode="showOnDemand" transparent="1">
-			<convert type="TemplatedMultiContent">
+    <ePixmap position="0,-1" size="1283,720" zPosition="-2" pixmap="Octagon-HD-Style-Black/menu/EMC_Player.png" />
+    <eLabel name="abdecken" position="1079,648" size="130,33" zPosition="-1" backgroundColor="black" />
+    <eLabel name="abdecken" position="410,605" size="5,35" zPosition="-1" backgroundColor="black" />
+    <eLabel name="abdecken" position="1018,605" size="5,35" zPosition="-1" backgroundColor="black" />
+    <ePixmap position="175,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_1.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="253,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_4.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="332,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_7.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="1036,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_3.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="1112,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_6.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="1191,687" size="30,29" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_9.png" zPosition="3" transparent="1" alphatest="blend" />
+    <eLabel position="540,691" zPosition="4" size="90,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Play" />
+    <eLabel position="844,691" zPosition="4" size="80,20" halign="center" font="Regular;18" transparent="1" foregroundColor="white" backgroundColor="background" text="Stop" />
+  </screen>
+  <screen name="SelectQuality" position="center,center" size="300,200" backgroundColor="un41000000" flags="wfNoBorder" title="Episode selector">
+    <widget name="menulabel" position="40,30" zPosition="1" size="232,24" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="un41000000" />
+    <widget name="filmparts" itemHeight="30" position="41,80" size="300,200" backgroundColor="un41000000" foregroundColor="white" />
+  </screen>
+  <screen name="nStreamTasksScreen" position="center,center" size="1180,550" title="Video Download List">
+  <widget source="movielist" render="Listbox" position="10,50" size="1180,450" zPosition="7" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (0, 1), size = (710, 28), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
 						MultiContentEntryText(pos = (720, 1), size = (150, 28), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
@@ -9340,8 +9306,7 @@ oder alle = Liste
 				"itemHeight": 29
 				}
 			</convert>
-		</widget>
-	</screen>	
-	       
-
+  </widget>
+<ePixmap position="17,514" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/key_exit.png" zPosition="4" transparent="1" alphatest="blend" />
+</screen>
 </skin>
