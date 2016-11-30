@@ -12,6 +12,7 @@
     <color name="amarillo" value="#00ffffc6" />
     <color name="background" value="#40000000" />
     <color name="background20" value="#20000000" />
+    <color name="background30" value="#30000000" />
     <color name="background40" value="#40000000" />
     <color name="background90" value="#90000000" />
     <color name="black" value="#00000000" />
@@ -24,6 +25,7 @@
     <color name="foreground" value="#00fefefe" />
     <color name="green" value="#00389416" />
     <color name="grey" value="#00bbbbbb" />
+    <color name="header" value="#00272e43" />
     <color name="meinbgroundschwarz" value="#00000000" />
     <color name="meinbgroundTransschwarz20" value="#20000000" />
     <color name="meinbgroundTransschwarz40" value="#40000000" />
@@ -446,7 +448,7 @@
   <screen name="UnhandledKey" position="49,40" size="70,70" title="UnhandledKey" zPosition="100" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="UnhandledKeyPixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/error.png" position="0,0" size="70,70" alphatest="on" />
   </screen>
-  <screen name="Menu" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
+  <screen name="Menu" position="50,90" size="580,580" title="Main menu" backgroundColor="header">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -459,11 +461,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_mainmenu" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_mainmenu" position="50,90" size="580,580" title="Main menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="9,68" size="560,500" scrollbarMode="showNever" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1">
+    <widget source="menu" render="Listbox" position="9,68" size="560,500" scrollbarMode="showNever" backgroundColor="background30" foregroundColor="white" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -472,11 +474,11 @@
 	</convert>
     </widget>
   </screen>
-  <screen name="menu_system" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_system" position="50,90" size="580,580" title="Main menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1">
+    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" backgroundColor="background30" foregroundColor="white" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 24)],
@@ -485,11 +487,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_setup" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_setup" position="50,90" size="580,580" title="Main menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="9,68" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget source="menu" render="Listbox" position="9,68" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background30" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -498,11 +500,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_timermenu" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_timermenu" position="50,90" size="580,580" title="Main menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background30" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -511,7 +513,7 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_extended" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
+  <screen name="menu_extended" position="50,90" size="580,580" title="Main menu" backgroundColor="background20">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -524,7 +526,7 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_osd_menu" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
+  <screen name="menu_osd_menu" position="50,90" size="580,580" title="Main menu" backgroundColor="background20">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -537,11 +539,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_network" position="50,90" size="580,580" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_network" position="50,90" size="580,580" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget source="menu" render="Listbox" position="9,67" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background30" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -550,20 +552,7 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_epg" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
-    </widget>
-    <widget source="menu" render="Listbox" position="9,69" size="560,500" scrollbarMode="showNever" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 50
-				}
-			</convert>
-    </widget>
-  </screen>
-  <screen name="menu_epgloadsave_menu" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
+  <screen name="menu_epg" position="50,90" size="580,580" title="Main menu" backgroundColor="background20">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -576,7 +565,20 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_harddisk" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
+  <screen name="menu_epgloadsave_menu" position="50,90" size="580,580" title="Main menu" backgroundColor="background20">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
+    </widget>
+    <widget source="menu" render="Listbox" position="9,69" size="560,500" scrollbarMode="showNever" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 26)],
+				"itemHeight": 50
+				}
+			</convert>
+    </widget>
+  </screen>
+  <screen name="menu_harddisk" position="50,90" size="580,580" title="Main menu" backgroundColor="background20">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -589,11 +591,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_information" position="50,90" size="603,580" title="Menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_information" position="50,90" size="603,580" title="Menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="12,67" size="560,260" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget source="menu" render="Listbox" position="12,67" size="560,260" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background30" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -601,23 +603,25 @@
 				}
 			</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="7,345" size="576,37" zPosition="6" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="metrixBlue">
+    <widget source="session.CurrentService" render="Label" position="7,345" size="576,33" zPosition="6" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="metrixBlue">
       <convert type="CPUInfoOBl">CPU Auslastung:$0 Core 1:$1  Core 2:$2</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="7,394" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" foregroundColor="metrixYellow">
+    <widget source="session.CurrentService" render="Label" position="7,393" size="576,30" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" foregroundColor="metrixYellow">
       <convert type="ReceiverInfoOBl">FleshInfo</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="5,444" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" foregroundColor="metrixGreen">
+    <widget source="session.CurrentService" render="Label" position="5,444" size="576,30" zPosition="1" font="Regular; 25" halign="left" valign="center" transparant="1" backgroundColor="black" foregroundColor="metrixGreen">
       <convert type="ReceiverInfoOBl">MemTotal</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="5,493" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="metrixSelection">
+    <widget source="session.CurrentService" render="Label" position="5,493" size="576,30" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="metrixSelection">
       <convert type="ReceiverInfoOBl">HddInfo,Long</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="10,542" size="576,37" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="white">
+    <widget source="session.CurrentService" render="Label" position="5,538" size="576,30" zPosition="1" font="Regular; 25" halign="left" valign="center" transparent="0" backgroundColor="black" foregroundColor="white">
       <convert type="ReceiverInfoOBl">UsbInfo,Long</convert>
     </widget>
+    <eLabel text="SysTemp:" position="17,40" size="101,22" font="Regular; 19" halign="left" valign="bottom" backgroundColor="background30" noWrap="1" transparent="1" zPosition="2" />
+    <widget source="global.CurrentTime" render="SYSTempOBL" position="111,40" size="60,22" font="Regular;19" halign="left" valign="bottom" foregroundColor="white" backgroundColor="black" noWrap="1" transparent="1" zPosition="3" />
   </screen>
-  <screen name="menu_scan" position="50,90" size="580,581" title="Main menu" backgroundColor="black">
+  <screen name="menu_scan" position="50,90" size="580,581" title="Main menu" backgroundColor="background20">
     <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
@@ -630,11 +634,11 @@
 			</convert>
     </widget>
   </screen>
-  <screen name="menu_shutdown" position="50,90" size="580,580" title="Main menu" backgroundColor="black">
-    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+  <screen name="menu_shutdown" position="50,90" size="580,580" title="Main menu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="228,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="10,68" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget source="menu" render="Listbox" position="10,68" size="560,500" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background30" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
@@ -759,16 +763,16 @@
     </widget>
     <widget name="Cover" position="7,495" size="155,220" zPosition="1" alphatest="on" />
   </screen>
-  <screen name="EnhancedMovieCenterMenu" position="50,60" size="740,620" title="EnhancedMovieCenterMenu" backgroundColor="metrixBackground">
-    <widget source="global.CurrentTime" render="Label" position="388,4" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
+  <screen name="EnhancedMovieCenterMenu" position="50,60" size="740,620" title="EnhancedMovieCenterMenu" backgroundColor="background30">
+    <widget source="global.CurrentTime" render="Label" position="388,4" size="350,25" font="Regular; 20" halign="right" backgroundColor="background30" transparent="1">
       <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
     </widget>
-    <widget name="config" position="16,37" size="705,443" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" />
-    <widget source="help" render="Label" position="15,488" size="705,98" font="Regular;20" foregroundColor="white" backgroundColor="metrixBackground" />
+    <widget name="config" position="16,37" size="705,443" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="background30" />
+    <widget source="help" render="Label" position="15,488" size="705,98" font="Regular;20" foregroundColor="white" backgroundColor="background30" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="45,595" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="322,595" size="12,24" alphatest="blend" />
-    <widget name="key_red" render="Label" position="77,595" size="240,24" zPosition="1" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="key_green" render="Label" position="354,595" size="240,24" zPosition="1" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="key_red" render="Label" position="77,595" size="240,24" zPosition="1" font="Regular; 20" backgroundColor="background30" transparent="1" />
+    <widget name="key_green" render="Label" position="354,595" size="240,24" zPosition="1" font="Regular; 20" backgroundColor="background30" transparent="1" />
     <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 700x3.png" position="19,481" size="700,5" alphatest="blend" />
   </screen>
   <!-- EnhancedMovieCenter Menu -->
@@ -1552,7 +1556,7 @@
     </widget>
     <eLabel text="-" position="1162,76" size="18,26" font="Regular; 24" halign="center" transparent="1" valign="center" />
     <widget name="timeline_text" position="20,226" size="1240,25" selectionDisabled="1" transparent="1" />
-    <widget name="list" position="20,261" size="1240,395" itemHeight="60" EntryBorderColor="metrixBackground" EntryBackgroundColor="black" EntryBackgroundColorSelected="black" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="list" position="20,261" size="1240,395" EntryFontWrap="no" scrollbarMode="showNever" ServiceFont="Regular;28" piconWidth="110" EntryFont="Regular;28" backgroundColor="black" transparent="1" ServiceForegroundColor="#00ffffff" ServiceForegroundColorNow="#00ffffff" ServiceBackgroundColor="#00000000" ServiceBackgroundColorNow="#00707070" EntryForegroundColor="#00ffffff" EntryForegroundColorSelected="#00ffffff" EntryBackgroundColor="#00000000" EntryBackgroundColorSelected="#004169e1" EntryBackgroundColorNow="#00707070" EntryBackgroundColorNowSelected="#004169e1" EntryForegroundColorNow="#00ffffff" EntryForegroundColorNowSelected="#00ffffff" ServiceBorderColor="#00ffffff" EntryBorderColor="#00ffffff" RecordForegroundColor="#00ffffff" RecordForegroundColorSelected="#00ffffff" RecordBackgroundColor="#00ff0000" RecordBackgroundColorSelected="#004169e1" ZapForegroundColor="#00ffffff" ZapBackgroundColor="#008b0000" ZapForegroundColorSelected="#00ffffff" ZapBackgroundColorSelected="#004169e1" />
     <widget name="timeline_now" position="30,247" zPosition="2" size="13,418" pixmap="Octagon-HD-Style-Black/timeline-now2.png" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="31,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="225,685" size="12,24" alphatest="blend" />
@@ -2357,6 +2361,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget name="ok" position="0,0" size="0,0" />
   </screen>
   <screen name="TimerEditList" position="0,0" size="800,720" title="Timer Editor" flags="wfNoBorder" backgroundColor="black">
+    <widget render="Label" source="Title" position="14,7" size="560,35" font="Regular; 24" backgroundColor="black" transparent="1" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="676,56" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Default</convert>
@@ -2369,10 +2374,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="202,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="383,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="564,685" size="12,24" alphatest="blend" />
-    <widget source="key_red" render="Label" position="38,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="221,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="402,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="582,685" size="160,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_red" render="Label" position="38,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" render="Label" position="221,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_yellow" render="Label" position="402,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_blue" render="Label" position="582,685" size="160,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="TimerEntry" position="50,0" size="800,720" title="Timer entry" flags="wfNoBorder" backgroundColor="black">
     <widget source="global.CurrentTime" render="Label" position="686,60" size="100,28" font="Regular;26" halign="right" backgroundColor="black" transparent="1">
@@ -9202,23 +9207,21 @@ oder alle = Liste
   </screen>
   <!--  Skin: nStreamPlayer HD -->
   <screen name="nPlaylist" position="0,0" size="1280,720" backgroundColor="un41000000" flags="wfNoBorder" title="Playlist">
-  <ePixmap position="60,681" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" zPosition="3" transparent="1" alphatest="blend" />
-  <eLabel position="80,679" zPosition="4" size="270,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="un41000000" text="ANAMENU / ZURÜCK" />
-  <widget backgroundColor="background" foregroundColor="unf0b400" position="741,398" size="535,255" name="description" font="Regular;22" />
-  <widget backgroundColor="un41000000" foregroundColor="white" position="8,0" size="850,40" name="playlist" zPosition="1" font="Regular;32" />
-  <widget name="time" position="895,-2" size="124,44" font="Regular;48" foregroundColor="white" backgroundColor="black " zPosition="0" />
-  <widget name="poster" position="743,140" size="220,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
-  <widget name="info" font="Regular;22" backgroundColor="background" foregroundColor="white" position="974,141" size="300,250" />
-  <widget name="feedlist" position="8,54" size="720,600" foregroundColorSelected="white" backgroundColor="un41000000" foregroundColor="white" backgroundColorSelected="#un303030" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" transparent="0" />
-  <widget name="version" position="874,680" zPosition="4" size="400,24" halign="left" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="un41000000" text=" " />
-  <widget name="pixmap4a" position="359,679" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/stop.png" zPosition="3" transparent="1" alphatest="blend" />
-  
-  
-  <widget name="stop" position="435,679" zPosition="4" size="170,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
-  <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" transparent="1" zPosition="-1" />
-<ePixmap position="738,56" size="536,76" pixmap="Octagon-HD-Style-Black/mmp/turkmediacenter.png" zPosition="3" transparent="1" alphatest="blend" />
-<ePixmap position="393,679" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/menu.png" zPosition="4" transparent="1" alphatest="blend" />
-</screen>
+    <ePixmap position="60,681" size="12,24" pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" zPosition="3" transparent="1" alphatest="blend" />
+    <eLabel position="80,679" zPosition="4" size="270,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="un41000000" text="ANAMENU / ZURÜCK" />
+    <widget backgroundColor="background" foregroundColor="unf0b400" position="741,398" size="535,255" name="description" font="Regular;22" />
+    <widget backgroundColor="un41000000" foregroundColor="white" position="8,0" size="850,40" name="playlist" zPosition="1" font="Regular;32" />
+    <widget name="time" position="895,-2" size="124,44" font="Regular;48" foregroundColor="white" backgroundColor="black " zPosition="0" />
+    <widget name="poster" position="743,140" size="220,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
+    <widget name="info" font="Regular;22" backgroundColor="background" foregroundColor="white" position="974,141" size="300,250" />
+    <widget name="feedlist" position="8,54" size="720,600" foregroundColorSelected="white" backgroundColor="un41000000" foregroundColor="white" backgroundColorSelected="#un303030" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="version" position="874,680" zPosition="4" size="400,24" halign="left" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="un41000000" text=" " />
+    <widget name="pixmap4a" position="359,679" size="32,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/stop.png" zPosition="3" transparent="1" alphatest="blend" />
+    <widget name="stop" position="435,679" zPosition="4" size="170,32" halign="center" font="Regular;22" transparent="1" foregroundColor="white" backgroundColor="black" />
+    <ePixmap position="0,0" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" alphatest="blend" transparent="1" zPosition="-1" />
+    <ePixmap position="738,56" size="536,76" pixmap="Octagon-HD-Style-Black/mmp/turkmediacenter.png" zPosition="3" transparent="1" alphatest="blend" />
+    <ePixmap position="393,679" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/menu.png" zPosition="4" transparent="1" alphatest="blend" />
+  </screen>
   <screen name="nIPTVplayer" position="0,590" size="1280,130" backgroundColor="un41000000" flags="wfNoBorder" title="IPTVplayer">
     <ePixmap position="11,4" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" />
     <widget position="15,8" halign="center" size="64,28" foregroundColor="white" zPosition="2" name="channel_number" transparent="1" font="Regular;34" />
@@ -9294,8 +9297,8 @@ oder alle = Liste
     <widget name="filmparts" itemHeight="30" position="41,80" size="300,200" backgroundColor="un41000000" foregroundColor="white" />
   </screen>
   <screen name="nStreamTasksScreen" position="center,center" size="1180,550" title="Video Download List">
-  <widget source="movielist" render="Listbox" position="10,50" size="1180,450" zPosition="7" scrollbarMode="showOnDemand" transparent="1">
-    <convert type="TemplatedMultiContent">
+    <widget source="movielist" render="Listbox" position="10,50" size="1180,450" zPosition="7" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (0, 1), size = (710, 28), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
 						MultiContentEntryText(pos = (720, 1), size = (150, 28), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
@@ -9306,7 +9309,7 @@ oder alle = Liste
 				"itemHeight": 29
 				}
 			</convert>
-  </widget>
-<ePixmap position="17,514" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/key_exit.png" zPosition="4" transparent="1" alphatest="blend" />
-</screen>
+    </widget>
+    <ePixmap position="17,514" size="32,29" pixmap="Octagon-HD-Style-Black/buttons/key_exit.png" zPosition="4" transparent="1" alphatest="blend" />
+  </screen>
 </skin>
