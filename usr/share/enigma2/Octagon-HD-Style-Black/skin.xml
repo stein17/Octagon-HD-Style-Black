@@ -1350,9 +1350,16 @@
     <widget source="key_blue" render="Label" position="614,685" size="160,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
   </screen>
-  <screen name="Dish" position="900,105" size="130,160" title="Dish" zPosition="-1" backgroundColor="black" flags="wfNoBorder">
-    <widget name="Dishpixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/dish.png" position="51,-35" size="256,256" alphatest="off" />
-  </screen>
+ <screen name="Dish" position="900,105" size="350,260" title="Dish" zPosition="1" backgroundColor="transparent" flags="wfNoBorder">
+  <widget name="Dishpixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/dish.png" position="94,2" size="256,256" alphatest="off" />
+<widget name="turnTime" position="45,5" size="80,20" zPosition="1" font="Regular;18" halign="right" borderWidth="1" transparent="1" />
+  <widget name="From" position="5,164" size="45,18" zPosition="1" font="Regular;16" halign="left" borderWidth="1" transparent="1" />
+  <widget name="posFrom" position="55,160" size="70,22" zPosition="1" font="Regular;20" halign="left" borderWidth="1" transparent="1" />
+  <widget name="Goto" position="5,184" size="45,18" zPosition="1" font="Regular;16" halign="left" borderWidth="1" transparent="1" />
+  <widget name="posGoto" position="55,180" size="70,22" zPosition="1" font="Regular;20" halign="left" borderWidth="1" transparent="1" />
+  <widget name="tunerName" position="5,144" size="100,14" zPosition="1" font="Regular;12" halign="left" borderWidth="1" transparent="1" />
+  <widget name="turnSpeed" position="75,98" size="50,16" zPosition="1" font="Regular;14" halign="right" borderWidth="1" transparent="1" />
+</screen>
   <screen name="EPGSelectionMulti" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="global.CurrentTime" render="Label" position="710,9" size="320,25" font="Regular;20" halign="right" backgroundColor="black" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -8535,352 +8542,359 @@ oder alle = Liste
     <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 700x3.png" position="0,102" size="680,3" alphatest="blend" zPosition="1" />
   </screen>
   <screen backgroundColor="transparent2" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-    <!-- Pixmap -->
-    <ePixmap name="back" position="0,center" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" zPosition="-75" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="767,288" size="488,3" alphatest="blend" zPosition="1" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="760,514" size="488,3" alphatest="blend" zPosition="1" />
-    <!-- Widgets -->
-    <widget source="Title" render="Label" position="5,5" size="720,34" font="Regular; 28" transparent="1" backgroundColor="black" valign="top" />
-    <widget backgroundColor="black" colorEventProgressbarBorder="meindunkelgrau" colorEventProgressbarBorderSelected="meindunkelgrau" colorServiceDescription="cyan1" colorServiceDescriptionSelected="unfcc000" foregroundColorServiceNotAvail="#00555555" itemHeight="44" name="list" position="17,67" scrollbarMode="showNever" serviceInfoFont="Regular;20" serviceItemHeight="44" serviceNameFont="Regular;22" serviceNumberFont="Regular;22" size="700,580" transparent="1" />
-    <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="747,255" size="520,30" font="Regular; 24" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" halign="center">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="ServiceEvent" render="Label" position="1079,95" size="82,26" font="Regular; 24" backgroundColor="black" transparent="1" halign="right" valign="top">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <eLabel text="-" position="1161,95" size="18,26" font="Regular; 24" halign="center" transparent="1" valign="center" />
-    <widget source="ServiceEvent" render="Label" position="1180,95" size="82,26" font="Regular; 24" backgroundColor="black" transparent="1" valign="top">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="ServiceEvent" render="Progress" pixmap="Octagon-HD-Style-Black/p_bar_sel.png" position="1096,131" size="152,8" transparent="1" zPosition="1" borderWidth="1" borderColor="uncccccc">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="747,296" size="520,211" font="Regular; 20" backgroundColor="black" foregroundColor="unfcc000" transparent="1" valign="top">
-      <convert type="EventName">FullDescription</convert>
-    </widget>
-    <widget position="1096,153" size="152,91" render="OE_XPiconOBl" source="ServiceEvent" alphatest="blend" zPosition="1" transparent="1">
-      <convert type="RefStringOBl">ServicelistRef</convert>
-    </widget>
-    <!-- Picture -->
-    <eLabel backgroundColor="black" position="748,66" size="320,180" zPosition="-15" />
-    <eLabel backgroundColor="white" position="746,64" size="324,184" zPosition="-20" />
-    <widget source="session.VideoPicture" render="Pig" position="748,66" size="320,180" zPosition="5" backgroundColor="unff000000" />
-    <!-- Widgets 2 -->
-    <widget source="ServiceEvent" render="OE_NextEventsOBl" position="747,524" size="520,105" noWrap="1" font="Regular;21" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="5">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="ServiceEvent" render="Label" position="747,636" size="440,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" noWrap="1" transparent="1" backgroundColor="black">
-      <convert type="NextEventsPrimeTimeOBl">PrimeTime,noDuration</convert>
-    </widget>
-    <widget source="ServiceEvent" render="Label" position="1189,636" size="80,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" halign="right" transparent="1" backgroundColor="black">
-      <convert type="NextEventsPrimeTimeOBl">PrimeTime,onlyDuration</convert>
-    </widget>
-    <!-- Buttons -->
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/menu.png" position="827,685" size="81,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_info.png" position="745,685" size="81,40" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="52,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="233,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="424,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="608,685" size="12,24" alphatest="blend" />
-    <widget name="key_red" position="77,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="un203658a4" transparent="1" />
-    <widget name="key_green" position="259,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_yellow" position="450,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_blue" position="632,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
-    <!-- Clock -->
-    <widget source="global.CurrentTime" render="Label" position="1178,8" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="761,8" size="270,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1" valign="top" text="Montag, 10.12.2012">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y, %H.%m</convert>
-    </widget>
-  </screen>
-  <screen backgroundColor="transparent2" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
-    <!-- Pixmap -->
-    <ePixmap name="back" position="center,center" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Octagon_Secondinfobar.png" zPosition="-75" />
-    <!-- Widgets -->
-    <eLabel text="Jetzt :" position="16,92" size="80,32" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="left" />
-    <eLabel text="Demnächst in" position="1067,192" size="210,30" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="center" />
-    <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="20,131" size="600,490" font="Regular; 22" zPosition="1" backgroundColor="black" foregroundColor="white" transparent="1" halign="left">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="656,410" size="600,250" font="Regular; 22" zPosition="0" backgroundColor="black" transparent="1" halign="left" foregroundColor="white">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="89,92" size="530,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="cyan1" transparent="1" halign="left">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="656,369" size="600,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="unfcc000" transparent="1" halign="left">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="1099,246" size="150,30" font="Regular; 25" halign="center" backgroundColor="black" transparent="1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Picon" position="1124,294" size="100,60" zPosition="4" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="53,628" size="75,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1" valign="top">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="448,628" size="75,30" font="Regular; 22" halign="left" backgroundColor="darkgrey" transparent="1" valign="top">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="507,628" size="103,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Black/p_bar_sel.png" position="133,638" size="310,8" zPosition="1" transparent="1" borderWidth="1" borderColor="uncccccc">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_off.png" position="1000,690" size="41,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" position="1000,690" size="41,20" zPosition="2" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_on.png" alphatest="blend">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRangeOBl">721,1980</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_off.png" position="930,690" size="56,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_on.png" position="930,690" size="56,20" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_format_off.png" position="885,690" size="32,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_format_on.png" position="885,690" size="32,20" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_txt_off.png" position="850,690" size="23,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_txt_on.png" position="850,690" size="23,20" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hbbtv_off.png" position="785,690" size="53,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" position="785,690" size="53,20" zPosition="2" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hbbtv_on.png" alphatest="blend">
-      <convert type="ServiceInfo">HasHBBTV</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_crypt_off.png" position="746,690" size="30,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_crypt_on.png" position="746,690" size="30,20" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_sub_off.png" position="705,690" size="30,20" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_sub_on.png" position="705,690" size="30,20" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">SubservicesAvailable</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- Aufnahme */-->
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_rec_off.png" position="1073,689" size="45,23" zPosition="2" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_rec_on.png" position="1073,689" render="Pixmap" size="45,23" source="session.RecordState" zPosition="5">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="530,687" size="60,26" font="Regular; 20" halign="right" backgroundColor="black" transparent="1" valign="center">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" position="590,687" size="15,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" />
-    <widget source="session.CurrentService" render="Label" position="605,687" size="60,26" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" valign="center">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-    <eLabel text="B" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="B">
-      <convert type="CryptInfoOBl">BetaCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="275,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="B">
-      <convert type="CryptInfoOBl">BetaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="I" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="I">
-      <convert type="CryptInfoOBl">IrdCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="293,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="I">
-      <convert type="CryptInfoOBl">IrdEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="S" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="S">
-      <convert type="CryptInfoOBl">SecaCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="311,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="S">
-      <convert type="CryptInfoOBl">SecaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="V" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" transparent="1" valign="center" zPosition="3" foregroundColor="un777777" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="V">
-      <convert type="CryptInfoOBl">ViaCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" text="V" font="Regular; 22" position="329,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center">
-      <convert type="CryptInfoOBl">ViaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="N" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="N">
-      <convert type="CryptInfoOBl">NagraCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="347,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="N">
-      <convert type="CryptInfoOBl">NagraEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="CW" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CW">
-      <convert type="CryptInfoOBl">CrwCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="368,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="CW">
-      <convert type="CryptInfoOBl">CrwEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="ND" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="ND">
-      <convert type="CryptInfoOBl">NdsCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="411,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="ND">
-      <convert type="CryptInfoOBl">NdsEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="CO" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CO">
-      <convert type="CryptInfoOBl">ConaxCrypt</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="453,713" size="36,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="CO">
-      <convert type="CryptInfoOBl">ConaxEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="SNR :" position="1141,687" size="70,26" halign="right" font="Regular; 20" backgroundColor="black" transparent="1" valign="center" foregroundColor="meingruen" />
-    <widget source="session.FrontendStatus" render="Label" position="1212,687" size="66,26" font="Regular; 20" backgroundColor="black" transparent="1" halign="left" foregroundColor="meingruen">
-      <convert type="FrontendInfoOBl">SNR</convert>
-    </widget>
-    <eLabel text="A" position="89,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
-    <eLabel text="B" position="110,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
-    <eLabel text="C" position="131,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
-    <eLabel text="D" position="152,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
-    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="89,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOBl">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="110,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOBl">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="131,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOBl">4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="152,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTestOBl">8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" position="89,713" zPosition="5" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOBl">NUMBER</convert>
-      <convert type="ValueRangeOBl">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="110,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOBl">NUMBER</convert>
-      <convert type="ValueRangeOBl">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="131,713" zPosition="3" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOBl">NUMBER</convert>
-      <convert type="ValueRangeOBl">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfoOBl" render="FixedLabel" position="152,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
-      <convert type="FrontendInfoOBl">NUMBER</convert>
-      <convert type="ValueRangeOBl">3,3</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text="Tuner:" position="15,687" size="75,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="cyan1" zPosition="5" />
-    <eLabel text="Crypt:" position="199,687" size="75,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="unfcc000" zPosition="5" />
-    <!-- Picture -->
-    <eLabel backgroundColor="black" position="655,125" size="409,230" zPosition="-15" />
-    <eLabel backgroundColor="white" position="653,123" size="413,234" zPosition="-20" />
-    <widget source="session.VideoPicture" render="Pig" position="655,125" size="409,230" zPosition="5" backgroundColor="unff000000" />
-    <!-- WEATHER -->
-    <widget noWrap="1" backgroundColor="meindunkelrot" foregroundColor="meinrot" font="Regular; 18" render="Label" position="295,13" size="60,20" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
-      <convert type="MSNWeather">temperature_current</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="242,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,current</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="196,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="414,9" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="473,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day2</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="502,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day2</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="462,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day2</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="634,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="723,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day3</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="683,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day3</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="693,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day3</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="943,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day4</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="913,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day4</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="902,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day4</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="854,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="1072,10" size="48,48" font="Meteo; 40" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
-    </widget>
-    <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="1120,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
-      <convert type="MSNWeather">temperature_text,day5</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="1161,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">temperature_heigh_low,day5</convert>
-    </widget>
-    <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="1131,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
-      <convert type="MSNWeather">weekshortday,day5</convert>
-    </widget>
-    <eLabel text="Status:" position="37,35" size="65,20" zPosition="8" halign="left" font="Regular; 18" backgroundColor="black" transparent="1" />
-    <widget Wrap="1" backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="1,12" size="210,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-      <convert type="MSNWeather">city</convert>
-    </widget>
-    <widget render="Label" noWrap="1" source="session.MSNWeather" position="92,35" zPosition="8" size="50,20" font="Regular; 18" transparent="1" halign="right" backgroundColor="black">
-      <convert type="MSNWeather">observationtime</convert>
-    </widget>
-    <eLabel text="Uhr" position="145,35" size="40,20" zPosition="8" halign="left" font="Regular; 18" backgroundColor="black" transparent="1" />
-    <!-- Clock -->
-    <widget source="global.CurrentTime" render="Label" position="893,81" size="380,35" font="Regular; 24" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
-    </widget>
-  </screen>
+  <!-- Pixmap -->
+  <ePixmap name="back" position="0,center" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_shanelselection.png" zPosition="-75" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="767,288" size="488,3" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/selection/Line 500x3.png" position="760,514" size="488,3" alphatest="blend" zPosition="1" />
+  <!-- Widgets -->
+<widget source="session.CurrentService" render="Label" position="0,12" size="110,26" backgroundColor="black" transparent="1" zPosition="1" text="DVB-S" font="Regular;20" halign="center" foregroundColor="cyan1">
+      <convert type="ServiceOrbitalPosition" />
+    </widget>
+  <widget source="Title" render="Label" position="120,5" size="650,34" font="Regular; 28" transparent="1" backgroundColor="black" valign="top" />
+  <widget backgroundColor="black" colorEventProgressbarBorder="meindunkelgrau" colorEventProgressbarBorderSelected="meindunkelgrau" colorServiceDescription="cyan1" colorServiceDescriptionSelected="unfcc000" foregroundColorServiceNotAvail="#00555555" itemHeight="44" name="list" position="17,67" scrollbarMode="showNever" serviceInfoFont="Regular;20" serviceItemHeight="44" serviceNameFont="Regular;22" serviceNumberFont="Regular;22" size="700,580" transparent="1" />
+  <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="747,255" size="520,30" font="Regular; 24" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" halign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1079,95" size="82,26" font="Regular; 24" backgroundColor="black" transparent="1" halign="right" valign="top">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel text="-" position="1161,95" size="18,26" font="Regular; 24" halign="center" transparent="1" valign="center" />
+  <widget source="ServiceEvent" render="Label" position="1180,95" size="82,26" font="Regular; 24" backgroundColor="black" transparent="1" valign="top">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Progress" pixmap="Octagon-HD-Style-Black/p_bar_sel.png" position="1096,131" size="152,8" transparent="1" zPosition="1" borderWidth="1" borderColor="uncccccc">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="ServiceEvent" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,step=1,steptime=100,repeat=4,oneshot=1,always=0,startdelay=5000,wrap" position="747,296" size="520,211" font="Regular; 20" backgroundColor="black" foregroundColor="unfcc000" transparent="1" valign="top">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  <widget position="1096,153" size="152,91" render="OE_XPiconOBl" source="ServiceEvent" alphatest="blend" zPosition="1" transparent="1">
+    <convert type="RefStringOBl">ServicelistRef</convert>
+  </widget>
+  <!-- Picture -->
+  <eLabel backgroundColor="black" position="748,66" size="320,180" zPosition="-15" />
+  <eLabel backgroundColor="white" position="746,64" size="324,184" zPosition="-20" />
+  <widget source="session.VideoPicture" render="Pig" position="748,66" size="320,180" zPosition="5" backgroundColor="unff000000" />
+  <!-- Widgets 2 -->
+  <widget source="ServiceEvent" render="OE_NextEventsOBl" position="747,524" size="520,105" noWrap="1" font="Regular;21" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="5">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="747,636" size="440,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" noWrap="1" transparent="1" backgroundColor="black">
+    <convert type="NextEventsPrimeTimeOBl">PrimeTime,noDuration</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1189,636" size="80,25" font="Regular; 21" foregroundColor="cyan1" zPosition="5" halign="right" transparent="1" backgroundColor="black">
+    <convert type="NextEventsPrimeTimeOBl">PrimeTime,onlyDuration</convert>
+  </widget>
+  <!-- Buttons -->
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/menu.png" position="827,685" size="81,40" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_info.png" position="745,685" size="81,40" alphatest="on" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_red.png" position="52,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_green.png" position="233,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_yellow.png" position="424,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/buttons/key_blue.png" position="608,685" size="12,24" alphatest="blend" />
+  <widget name="key_red" position="77,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="un203658a4" transparent="1" />
+  <widget name="key_green" position="259,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="key_yellow" position="450,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="key_blue" position="632,685" size="90,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" />
+  <!-- Clock -->
+  <widget source="global.CurrentTime" render="Label" position="1178,8" size="100,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="761,8" size="270,25" font="Regular; 20" halign="right" backgroundColor="black" transparent="1" valign="top" text="Montag, 10.12.2012">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y, %H.%m</convert>
+  </widget>
+</screen>
+ <screen backgroundColor="transparent2" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
+  <!-- Pixmap -->
+  <ePixmap name="back" position="center,center" size="1280,720" pixmap="Octagon-HD-Style-Black/menu/Octagon_Secondinfobar.png" zPosition="-75" />
+  <!-- Widgets -->
+    <widget source="session.CurrentService" render="Label" position="1031,687" size="110,26" backgroundColor="black" transparent="1" zPosition="1" text="DVB-S" font="Regular;20" halign="right" foregroundColor="cyan1">
+      <convert type="ServiceOrbitalPosition" />
+    </widget>
+  <eLabel text="Jetzt :" position="16,92" size="80,32" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="left" />
+  <eLabel text="Demnächst in" position="1067,192" size="210,30" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="black" halign="center" />
+  <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="20,131" size="600,490" font="Regular; 22" zPosition="1" backgroundColor="black" foregroundColor="white" transparent="1" halign="left">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,oneshot=1,startdelay=8000,wrap" position="656,410" size="600,250" font="Regular; 22" zPosition="0" backgroundColor="black" transparent="1" halign="left" foregroundColor="white">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget source="session.Event_Now" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="89,92" size="530,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="cyan1" transparent="1" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="OE_RunningTextOBl" options="movetype=running,startpoint=0,direction=left,step=1,steptime=25,repeat=4,oneshot=1,always=0,startdelay=3000,nowrap" position="656,369" size="600,32" font="Regular; 25" zPosition="1" backgroundColor="black" foregroundColor="unfcc000" transparent="1" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1099,246" size="150,30" font="Regular; 25" halign="center" backgroundColor="black" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" position="1124,294" size="100,60" zPosition="4" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="53,628" size="75,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1" valign="top">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="448,628" size="75,30" font="Regular; 22" halign="left" backgroundColor="darkgrey" transparent="1" valign="top">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="507,628" size="103,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Black/p_bar_sel.png" position="133,638" size="310,8" zPosition="1" transparent="1" borderWidth="1" borderColor="uncccccc">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_off.png" position="980,690" size="41,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" position="980,690" size="41,20" zPosition="2" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hd_on.png" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRangeOBl">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_off.png" position="910,690" size="56,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_dolby_on.png" position="910,690" size="56,20" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_format_off.png" position="865,690" size="32,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_format_on.png" position="865,690" size="32,20" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_txt_off.png" position="830,690" size="23,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_txt_on.png" position="830,690" size="23,20" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hbbtv_off.png" position="765,690" size="53,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" position="765,690" size="53,20" zPosition="2" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_hbbtv_on.png" alphatest="blend">
+    <convert type="ServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_crypt_off.png" position="726,690" size="30,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_crypt_on.png" position="726,690" size="30,20" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_sub_off.png" position="685,690" size="30,20" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_sub_on.png" position="685,690" size="30,20" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- Aufnahme */-->
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_rec_off.png" position="5,631" size="45,23" zPosition="2" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Black/skin_default/icons/ico_rec_on.png" position="5,631" render="Pixmap" size="45,23" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="530,687" size="60,26" font="Regular; 20" halign="right" backgroundColor="black" transparent="1" valign="center">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="590,687" size="15,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" />
+  <widget source="session.CurrentService" render="Label" position="605,687" size="60,26" font="Regular; 20" halign="left" backgroundColor="black" transparent="1" valign="center">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <eLabel text="B" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="275,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="B">
+    <convert type="CryptInfoOBl">BetaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="275,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="B">
+    <convert type="CryptInfoOBl">BetaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="I" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="293,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="I">
+    <convert type="CryptInfoOBl">IrdCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="293,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="I">
+    <convert type="CryptInfoOBl">IrdEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="S" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="311,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="S">
+    <convert type="CryptInfoOBl">SecaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="311,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="S">
+    <convert type="CryptInfoOBl">SecaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="V" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" transparent="1" valign="center" zPosition="3" foregroundColor="un777777" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="329,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="V">
+    <convert type="CryptInfoOBl">ViaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="V" font="Regular; 22" position="329,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center">
+    <convert type="CryptInfoOBl">ViaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="N" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="347,687" size="18,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="N">
+    <convert type="CryptInfoOBl">NagraCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="347,713" size="18,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="N">
+    <convert type="CryptInfoOBl">NagraEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="CW" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="365,687" size="44,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CW">
+    <convert type="CryptInfoOBl">CrwCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="368,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="CW">
+    <convert type="CryptInfoOBl">CrwEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="ND" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="409,687" size="42,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="ND">
+    <convert type="CryptInfoOBl">NdsCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="411,713" size="38,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="top" text="ND">
+    <convert type="CryptInfoOBl">NdsEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="CO" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 20" position="451,687" size="40,24" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="CO">
+    <convert type="CryptInfoOBl">ConaxCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" font="Regular; 22" position="453,713" size="36,3" halign="center" backgroundColor="metrixSelection" foregroundColor="metrixGreen" zPosition="4" transparent="0" valign="center" text="CO">
+    <convert type="CryptInfoOBl">ConaxEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="SNR :" position="1141,687" size="70,26" halign="right" font="Regular; 20" backgroundColor="black" transparent="1" valign="center" foregroundColor="meingruen" />
+  <widget source="session.FrontendStatus" render="Label" position="1212,687" size="66,26" font="Regular; 20" backgroundColor="black" transparent="1" halign="left" foregroundColor="meingruen">
+    <convert type="FrontendInfoOBl">SNR</convert>
+  </widget>
+  <eLabel text="A" position="89,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
+  <eLabel text="B" position="110,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
+  <eLabel text="C" position="131,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
+  <eLabel text="D" position="152,687" zPosition="1" size="20,24" font="Regular; 20" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="89,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
+
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTestOBl">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="110,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTestOBl">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="131,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTestOBl">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="152,687" zPosition="2" size="20,24" font="Regular; 20" halign="center" backgroundColor="background20" transparent="1" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTestOBl">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" position="89,713" zPosition="5" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+    <convert type="FrontendInfoOBl">NUMBER</convert>
+    <convert type="ValueRangeOBl">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfoOBl" render="FixedLabel" position="110,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+    <convert type="FrontendInfoOBl">NUMBER</convert>
+    <convert type="ValueRangeOBl">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfoOBl" render="FixedLabel" position="131,713" zPosition="3" size="20,3" font="Regular; 22" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+    <convert type="FrontendInfoOBl">NUMBER</convert>
+    <convert type="ValueRangeOBl">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfoOBl" render="FixedLabel" position="152,713" zPosition="3" size="20,3" font="Regular; 20" halign="center" foregroundColor="metrixGreen" backgroundColor="metrixSelection" transparent="0" valign="top">
+    <convert type="FrontendInfoOBl">NUMBER</convert>
+    <convert type="ValueRangeOBl">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="Tuner:" position="15,687" size="75,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="cyan1" zPosition="5" />
+  <eLabel text="Crypt:" position="199,687" size="75,26" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="unfcc000" zPosition="5" />
+  <!-- Picture -->
+  <eLabel backgroundColor="black" position="655,125" size="409,230" zPosition="-15" />
+  <eLabel backgroundColor="white" position="653,123" size="413,234" zPosition="-20" />
+  <widget source="session.VideoPicture" render="Pig" position="655,125" size="409,230" zPosition="5" backgroundColor="unff000000" />
+  <!-- WEATHER -->
+  <widget noWrap="1" backgroundColor="meindunkelrot" foregroundColor="meinrot" font="Regular; 18" render="Label" position="295,13" size="60,20" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="242,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,current</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="196,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="414,9" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="473,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day2</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="502,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day2</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="462,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day2</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="634,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="723,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day3</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="683,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day3</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="693,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day3</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="943,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day4</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="913,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day4</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="902,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day4</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="854,10" size="48,48" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
+  </widget>
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1072,10" size="48,48" font="Meteo; 40" source="session.MSNWeather" transparent="1" zPosition="5">
+    <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/Octagon-HD-Style-Black/Wettericons/,png</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="black" font="Regular; 16" foregroundColor="white" render="Label" position="1120,35" size="160,20" source="session.MSNWeather" halign="center" transparent="1" zPosition="8" valign="top">
+    <convert type="MSNWeather">temperature_text,day5</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="1161,13" size="100,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">temperature_heigh_low,day5</convert>
+  </widget>
+  <widget backgroundColor="black" font="Regular; 18" foregroundColor="blue2" render="Label" position="1131,13" size="30,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="MSNWeather">weekshortday,day5</convert>
+  </widget>
+  <eLabel text="Status:" position="37,35" size="65,20" zPosition="8" halign="left" font="Regular; 18" backgroundColor="black" transparent="1" />
+  <widget Wrap="1" backgroundColor="black" font="Regular; 18" foregroundColor="cyan1" render="Label" position="1,12" size="210,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
+    <convert type="MSNWeather">city</convert>
+  </widget>
+  <widget render="Label" noWrap="1" source="session.MSNWeather" position="92,35" zPosition="8" size="50,20" font="Regular; 18" transparent="1" halign="right" backgroundColor="black">
+    <convert type="MSNWeather">observationtime</convert>
+  </widget>
+  <eLabel text="Uhr" position="145,35" size="40,20" zPosition="8" halign="left" font="Regular; 18" backgroundColor="black" transparent="1" />
+  <!-- Clock -->
+  <widget source="global.CurrentTime" render="Label" position="893,81" size="380,35" font="Regular; 24" halign="right" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
+  </widget>
+</screen>
   <screen name="LCDClockSelector" position="50,0" size="800,720" title="Lcd Clock Selector" flags="wfNoBorder" backgroundColor="black">
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Black/menu/Oktagon_menu.png" alphatest="blend" />
     <widget name="ClockList" position="21,106" size="750,320" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
